@@ -1,23 +1,44 @@
 <table>
     <tr>
-        <td>上線準備</td>
+        <td>現況訪談</td>
     </tr>
 </table>
 
 #### 紀錄 
 1. memo
 
+<table>
+    <tr>
+        <td>教育訓練與操作</td>
+    </tr>
+</table>
 
-#### 開發紀錄 (多注意點和底線)
+#### 紀錄 
 1. memo
-    + memo
 
-2. memo
-  > 
-    ps aux  | grep 'postgres *-D'
-    service postgresql status
-    port sudo ufw status verbose
-    sudo -u postgres psql 
-    ALTER USER postgres WITH PASSWORD 'postgres';
-    sudo -i -u postgres
+<table>
+    <tr>
+        <td>基本資料檢核與開帳說明</td>
+    </tr>
+</table>
 
+#### 紀錄 
+1. memo
+
+<table>
+    <tr>
+        <td>開帳與上線駐廠</td>
+    </tr>
+</table>
+
+#### 紀錄 
+1. memo
+
+<table>
+    <tr>
+        <td>結帳流程</td>
+    </tr>
+</table>
+
+#### 紀錄 
+1. memo
