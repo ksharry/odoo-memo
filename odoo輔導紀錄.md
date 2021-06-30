@@ -50,3 +50,8 @@
 
 #### 結帳流程
 1. memo
+
+
+#### 預計改善清單
+1. 美金匯率的轉換:https://apps.odoo.com/apps/modules/12.0/currency_exchange_rate_inverted/
+2. 
