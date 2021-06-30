@@ -55,4 +55,4 @@
 
 #### 預計改善清單
 1. 美金匯率的轉換:https://apps.odoo.com/apps/modules/12.0/currency_exchange_rate_inverted/
-2. 
+2. 帳齡現在是用到期日計算。
