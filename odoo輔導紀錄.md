@@ -66,13 +66,13 @@
    update mrp_bom set product_uom_id=38 where product_uom_id=22
    update mrp_bom_line set product_uom_id=23 where product_uom_id=20
 3. 更新盤點:
-   >  
-   -- update account_move set state='draft' where name like 'STJ%'
-   -- update account_move set name='/' where name like 'STJ%'
-   delete from account_move where name like 'STJ%';
-   delete from account_move_line where move_name like 'STJ%';
-   delete from stock_move;
-   delete from stock_move_line;
-   delete from stock_valuation_layer;
-   delete from stock_quant;
-   update stock_inventory set state = 'confirm'
+  >  
+    -- update account_move set state='draft' where name like 'STJ%'
+    -- update account_move set name='/' where name like 'STJ%'
+    delete from account_move where name like 'STJ%';
+    delete from account_move_line where move_name like 'STJ%';
+    delete from stock_move;
+    delete from stock_move_line;
+    delete from stock_valuation_layer;
+    delete from stock_quant;
+    update stock_inventory set state = 'confirm'
