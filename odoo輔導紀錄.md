@@ -57,3 +57,22 @@
 #### 預計改善清單
 1. 美金匯率的轉換:https://apps.odoo.com/apps/modules/12.0/currency_exchange_rate_inverted/
 2. 帳齡現在是用到期日計算。
+
+#### 指令紀錄
+1. 更新BOM :update mrp_bom set consumption = 'flexible'
+2. 更新單位:
+   >  
+   update product_template set uom_id=23,uom_po_id=23 where uom_id=20
+   update mrp_bom set product_uom_id=38 where product_uom_id=22
+   update mrp_bom_line set product_uom_id=23 where product_uom_id=20
+3. 更新盤點:
+   >  
+   -- update account_move set state='draft' where name like 'STJ%'
+   -- update account_move set name='/' where name like 'STJ%'
+   delete from account_move where name like 'STJ%';
+   delete from account_move_line where move_name like 'STJ%';
+   delete from stock_move;
+   delete from stock_move_line;
+   delete from stock_valuation_layer;
+   delete from stock_quant;
+   update stock_inventory set state = 'confirm'
