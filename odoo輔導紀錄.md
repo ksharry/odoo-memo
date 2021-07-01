@@ -61,10 +61,10 @@
 #### 指令紀錄
 1. 更新BOM :update mrp_bom set consumption = 'flexible'
 2. 更新單位:
-   >  
-   update product_template set uom_id=23,uom_po_id=23 where uom_id=20
-   update mrp_bom set product_uom_id=38 where product_uom_id=22
-   update mrp_bom_line set product_uom_id=23 where product_uom_id=20
+  >  
+    update product_template set uom_id=23,uom_po_id=23 where uom_id=20
+    update mrp_bom set product_uom_id=38 where product_uom_id=22
+    update mrp_bom_line set product_uom_id=23 where product_uom_id=20
 3. 更新盤點:
   >  
     -- update account_move set state='draft' where name like 'STJ%'
