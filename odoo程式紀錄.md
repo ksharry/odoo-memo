@@ -56,7 +56,11 @@
 1. python3.7.9 使用管理著，自定選python37路徑。1.勾選第一個，最後DISABLE
 2. postgresql  使用10以上版本。
 3. ODOO GITHUB下載
-
+4. 主機重開指令順序 (這個超重要, 之前沒有照這個順序下指令重開機, 結果資料庫直接毀損):
+  > 
+    sudo service odoo-server stop
+    sudo service postgresql stop
+    sudo reboot
 
 #### 開發紀錄 (多注意點和底線)
 1. bbb新增承租紀錄:
