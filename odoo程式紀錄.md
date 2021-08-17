@@ -1,6 +1,16 @@
 #### 全域紀錄 
 1. vm tool 安裝 用虛擬光碟下載到目錄後,使用sudo perl vmware-indatll.pl進行安裝
+sudo wget https://raw.githubusercontent.com/Yenthe666/InstallScript/14.0/odoo_install.sh
 
+sudo chmod +x odoo_install.sh
+
+sudo ./odoo_install.sh
+
+sudo apt-get install ttf-wqy-zenhei -y
+
+sudo apt-get install ttf-wqy-microhei -y
+
+sudo reboot
 #### github使用方式(win10)
 1. 參考https://progressbar.tw/posts/3
 2. https://git-scm.com/downloads
