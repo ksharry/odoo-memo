@@ -1,6 +1,15 @@
 #### 全域紀錄 
 1. vm tool 安裝 用虛擬光碟下載到目錄後,使用sudo perl vmware-indatll.pl進行安裝
 
+#### pycharm複製環境
+1. setting先設定一個ven14環境
+2. 下載odoo14
+3. 右上角設定啟動參數與右下角改變環境
+4. pip install requirements,忽略以下
+   +  feedparser==5.2.1
+   +  python-stdnum==1.8
+6. 啟動環境並新增資料庫
+
 sudo reboot
 #### github使用方式(win10)
 1. 參考https://progressbar.tw/posts/3
