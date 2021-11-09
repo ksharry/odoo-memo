@@ -1,3 +1,6 @@
+#### Yun666
+1. 搜尋NGINX，調整為TRUE跟調整website_name
+
 #### 全域紀錄 
 1. vm tool 安裝 用虛擬光碟下載到目錄後,使用sudo perl vmware-indatll.pl進行安裝
 
@@ -96,7 +99,8 @@ sudo reboot
 
 #### 紀錄 
 1. 環境vmware 
-2. 啟動指令 https://www.candidroot.com/blog/our-candidroot-blog-1/post/how-to-install-odoo-14-on-ubuntu-20-04-lts-67
+2. 啟動指令 https://www.candidroot.com/blog/our-candidroot-blog-1/
+/how-to-install-odoo-14-on-ubuntu-20-04-lts-67
   > 
     sudo su - odoo -s /bin/bash
     cd /odoo/odoo-server
