@@ -1,6 +1,7 @@
 #### Yun666
 1. 搜尋NGINX，調整為TRUE跟調整website_name
-
+2. SSL安裝:https://peterli.website/%E5%A6%82%E4%BD%95%E5%9C%A8ubuntu-16-04%E4%B8%8A%E5%AE%89%E8%A3%9Dcertbot%E7%94%A2%E7%94%9F%E6%9C%89%E6%95%88%E7%9A%84ssl%E6%86%91%E8%AD%89/
+3. 
 #### 全域紀錄 
 1. vm tool 安裝 用虛擬光碟下載到目錄後,使用sudo perl vmware-indatll.pl進行安裝
 
