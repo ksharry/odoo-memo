@@ -1,3 +1,6 @@
+#### 設定問題
+1.庫存計價增加消耗品:[('product_id.type', 'in', ('product','consu'))]
+
 #### 安裝問題
 1. 一直會斷線要更新要設定worker
 
