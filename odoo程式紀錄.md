@@ -6,8 +6,12 @@
 
 #### Yun666
 1. 搜尋NGINX，調整為TRUE跟調整website_name
-2. SSL安裝:https://peterli.website/%E5%A6%82%E4%BD%95%E5%9C%A8ubuntu-16-04%E4%B8%8A%E5%AE%89%E8%A3%9Dcertbot%E7%94%A2%E7%94%9F%E6%9C%89%E6%95%88%E7%9A%84ssl%E6%86%91%E8%AD%89/
-3. 
+2. ngix設定網址:/etc/nginx/sites-available/odoo
+3. 確認nginx是否啟動:ps -ef | grep nginx 
+4. 重啟sudo systemctl start nginx
+5. sudo certbot --nginx -d ottsleep.com --noninteractive --agree-tos --email harry.chang@dahsheng.com --redirect
+6. SSL安裝:https://peterli.website/%E5%A6%82%E4%BD%95%E5%9C%A8ubuntu-16-04%E4%B8%8A%E5%AE%89%E8%A3%9Dcertbot%E7%94%A2%E7%94%9F%E6%9C%89%E6%95%88%E7%9A%84ssl%E6%86%91%E8%AD%89/
+7. 
 #### vm安裝問題
 1. vm tool 安裝 用虛擬光碟下載到目錄後,使用sudo perl vmware-indatll.pl進行安裝
 2. 如果要複製可以複製vmdk,vmx兩個檔案
