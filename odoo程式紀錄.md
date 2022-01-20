@@ -1,3 +1,14 @@
+#### wkf沒裝成功
+1. sudo wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.trusty_amd64.deb
+2. sudo gdebi --n `basename https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.trusty_amd64.deb`
+3. 如有出錯執行下面程序
+   +  sudo add-apt-repository ppa:linuxuprising/libpng12
+   +  sudo apt update
+   +  sudo apt install libpng12-0
+4. sudo ln -s /usr/local/bin/wkhtmltopdf /usr/bin
+5. sudo ln -s /usr/local/bin/wkhtmltoimage /usr/bin
+6. 
+
 #### 設定問題
 1.庫存計價->編輯動作->增加消耗品:[('product_id.type', 'in', ('product','consu'))]
 
