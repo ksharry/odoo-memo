@@ -2,7 +2,7 @@
 1. sudo su - odoo -s /bin/bash
 2. 編輯檔案路徑
 3. python3 odoo-bin shell -c /etc/odoo-server.conf  -d dsc_211228 --no-http
-4. 
+4. exec(open('/odoo/odoo-server/test_shell.py').read())
 
 
 #### 搬動addons指令
