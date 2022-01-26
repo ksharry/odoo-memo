@@ -1,3 +1,15 @@
+#### 腳本匯入
+1. sudo su - odoo -s /bin/bash
+2. 編輯檔案路徑
+3. python3 odoo-bin shell -c /etc/odoo-server.conf  -d dsc_211228 --no-http
+4. 
+
+
+#### 搬動addons指令
+1. cp -a ~/addons/* /odoo/custom/addons/.
+2. sudo chown -R oodo: /odoo/custom/addons
+3. sudo chmod 755 -R /odoo/custom/addons
+
 #### wkf沒裝成功
 1. sudo wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.trusty_amd64.deb
 2. sudo gdebi --n `basename https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.trusty_amd64.deb`
