@@ -1,3 +1,6 @@
+#### 更改LOGO位置
+1. /home/wkc/odoo-dev/odoo/addons/web/static/src/img
+
 #### 腳本匯入
 1. sudo su - odoo -s /bin/bash
 2. 編輯檔案路徑
