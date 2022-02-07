@@ -288,10 +288,10 @@ sudo reboot
     </group>
     
 16. odoo14調整連線pgadmin /etc/postgres/12/main 
-  + 調整pg_hba.conf 0.0.0.0/0  # IPv4 local connections:   host    all             all             0.0.0.0/0            md5
-  + 調整pg_hba.conf 0.0.0.0/0  # replication privilege.    host    replication     all             0.0.0.0/0            md5
+  + 調整pg_hba.conf 0.0.0.0/0  # IPv4 local connections:   host    all             all             0.0.0.0/0               md5
+  + 調整pg_hba.conf 0.0.0.0/0  # replication privilege.    host    replication     all             0.0.0.0/0               md5
   + 開放postgresql.conf    listen_addresses = '*'
-  + 重啟  /etc/init.d/postgresql restart
+  + 重啟  sudo /etc/init.d/postgresql restart
   > 
     ps aux  | grep 'postgres *-D'
     service postgresql status
