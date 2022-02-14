@@ -3,7 +3,7 @@
 2. M2O 表頭對員工，紀錄ID
 
 ## 沈弘哲
-#### 1-20都為紙本memo,22以後調整git紀錄
+#### 1-18都為紙本memo,19以後調整git紀錄
 * [Youtube Tutorial - odoo 手把手教學 - Many2one - part1](https://youtu.be/vb_Z8KCI-wk) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---many2one---part1)
 
 * [Youtube Tutorial - odoo 手把手教學 - Many2many - part2](https://youtu.be/QeZfJqTGP-w) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---many2many---part2)
@@ -56,11 +56,11 @@
 1. 新增計數功能
 
 * [Youtube Tutorial - odoo 手把手教學 - options create_edit 說明 - part23](https://youtu.be/GdPKllI7quI) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---options-create_edit-%E8%AA%AA%E6%98%8E---part23)
-1. 欄位的options功能
-   + options="{'no_quick_create': True}
-   + options="{'no_create_edit': True}
-   + options="{'no_create': True}
-   + options="{'no_open': True}
+  + 欄位的options功能
+    + options="{'no_quick_create': True}
+    + options="{'no_create_edit': True}
+    + options="{'no_create': True}
+    + options="{'no_open': True}
  
 * [Youtube Tutorial - odoo 手把手教學 - PostgreSQL ondelete cascade 說明 - part24](https://youtu.be/OTh5R2LrwJE) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---postgresql-ondelete-cascade-%E8%AA%AA%E6%98%8E---part24)
 1. ondelete是postgres的功能依附
