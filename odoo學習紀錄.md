@@ -43,17 +43,17 @@
 * [Youtube Tutorial - odoo 手把手教學 - model _rec_name 說明 - part18](https://youtu.be/JtcSnbHNjAU) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---model-_rec_name-%E8%AA%AA%E6%98%8E---part18)
 
 * [Youtube Tutorial - odoo 手把手教學 - copy override 說明 - part19](https://youtu.be/VDnIFb7e7wM) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---copy-override-%E8%AA%AA%E6%98%8E---part19)
-1. copy預設為True，可以自動複製其他資料
-2. 要了解原生copy邏輯在使用會比較好，避免異常。
+  + copy預設為True，可以自動複製其他資料
+  + 要了解原生copy邏輯在使用會比較好，避免異常。
 
 * [Youtube Tutorial - odoo 手把手教學 - move position 說明 - part20](https://youtu.be/l-bFOqTYgTA) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---move-position-%E8%AA%AA%E6%98%8E---part20)
-1. 繼承交換兩個欄位的位置
-2. 前面加一個ID，此ID位置為MOVE
+  + 繼承交換兩個欄位的位置
+  + 前面加一個ID，此ID位置為MOVE
 
 * odoo 手把手教學 - ir.actions.act_url 說明 - part21 - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---iractionsact_url-%E8%AA%AA%E6%98%8E---part21)
 
 * [Youtube Tutorial - odoo 手把手教學 - Smart Button 說明 - part22](https://youtu.be/fsZK1KRgnF0) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---smart-button-%E8%AA%AA%E6%98%8E---part22)
-1. 新增計數功能
+  + 新增計數功能
 
 * [Youtube Tutorial - odoo 手把手教學 - options create_edit 說明 - part23](https://youtu.be/GdPKllI7quI) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---options-create_edit-%E8%AA%AA%E6%98%8E---part23)
   + 欄位的options功能
