@@ -39,6 +39,8 @@
 * [Youtube Tutorial - odoo 手把手教學 - model _rec_name 說明 - part18](https://youtu.be/JtcSnbHNjAU) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---model-_rec_name-%E8%AA%AA%E6%98%8E---part18)
 
 * [Youtube Tutorial - odoo 手把手教學 - copy override 說明 - part19](https://youtu.be/VDnIFb7e7wM) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---copy-override-%E8%AA%AA%E6%98%8E---part19)
+1. copy預設為True，可以自動複製其他資料
+2. 要了解原生copy邏輯在使用會比較好，避免異常。
 
 * [Youtube Tutorial - odoo 手把手教學 - move position 說明 - part20](https://youtu.be/l-bFOqTYgTA) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---move-position-%E8%AA%AA%E6%98%8E---part20)
 
@@ -65,9 +67,3 @@
 * [(等待新增)Youtube Tutorial - odoo 手把手教學 - ACID transactions 說明 - part31]() - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---acid-transactions-%E8%AA%AA%E6%98%8E---part31)
 
 * [(等待新增)Youtube Tutorial - odoo 手把手教學 - 特殊 groups 應用說明 - part32]() - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---%E7%89%B9%E6%AE%8A-groups-%E6%87%89%E7%94%A8%E8%AA%AA%E6%98%8E---part32)
-#### [Youtube Tutorial - odoo 手把手教學 - copy override 說明 - part19](https://www.youtube.com/watch?v=VDnIFb7e7wM) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---copy-override-%E8%AA%AA%E6%98%8E---part19)
-1. copy預設為True，可以自動複製其他資料
-2. 要了解原生copy邏輯在使用會比較好，避免異常。
-
-#### [Youtube Tutorial - odoo 手把手教學 - copy override 說明 - part19](https://www.youtube.com/watch?v=l-bFOqTYgTA) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---copy-override-%E8%AA%AA%E6%98%8E---part19)
-1. copy預設為True，可以自動複製其他資料
