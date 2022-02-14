@@ -43,6 +43,8 @@
 2. 要了解原生copy邏輯在使用會比較好，避免異常。
 
 * [Youtube Tutorial - odoo 手把手教學 - move position 說明 - part20](https://youtu.be/l-bFOqTYgTA) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---move-position-%E8%AA%AA%E6%98%8E---part20)
+1. 繼承交換兩個欄位的位置
+2. 前面加一個ID，此ID位置為MOVE
 
 * odoo 手把手教學 - ir.actions.act_url 說明 - part21 - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---iractionsact_url-%E8%AA%AA%E6%98%8E---part21)
 
