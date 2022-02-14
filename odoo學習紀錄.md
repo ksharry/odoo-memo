@@ -66,9 +66,18 @@
    + ondelete='restrict'
 
 * [Youtube Tutorial - odoo14 手把手教學 - auto_join 說明 - part25](https://youtu.be/OOlPZETkYKw) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/14.0/demo_expense_tutorial_v1#odoo14-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---auto_join-%E8%AA%AA%E6%98%8E)
+1. auto_join預設是false，使用sub查詢
+2. odoo12使用inner join ;  odoo14改用left join
+3. 補充[odoo 教學 - 如何透過 log_level 了解 ORM RAW SQL](https://www.youtube.com/watch?v=sZWFGf23gWc)
+   +  orm指令對應的raw sql
+   +  log_level = debug_sql      
 
 * [Youtube Tutorial - odoo 手把手教學 - view parent 說明 - part26](https://youtu.be/i_hG4s_YJN0) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---view-parent-%E8%AA%AA%E6%98%8E---part26)
-
+1. o2m,m2o時，要抓單頭資料做限制時使用
+2. 說明:
+   + <field name="tag_ids" widget="many2many_tags" attrs="{'readonly': [('parent.name', '=', 'test-readonly')]}"/>
+   + 要搭配<tree editable="top">使用才會生效 -->直接編輯才生效
+ 
 * [Youtube Tutorial - odoo 手把手教學 - domain 搭配 fields 的三種用法 - part27](https://youtu.be/ZUNRoWxVWAE) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---domain-%E6%90%AD%E9%85%8D-fields-%E7%9A%84%E4%B8%89%E7%A8%AE%E7%94%A8%E6%B3%95---part27)
 
 * [Youtube Tutorial - odoo 手把手教學 - form_view_ref 以及 tree_view_ref 說明 - part28](https://youtu.be/_YkrOp3ytlQ) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---form_view_ref-%E4%BB%A5%E5%8F%8A-tree_view_ref-%E8%AA%AA%E6%98%8E---part28)
