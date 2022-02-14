@@ -79,6 +79,9 @@
    + 要搭配<tree editable="top">使用才會生效 -->直接編輯才生效
  
 * [Youtube Tutorial - odoo 手把手教學 - domain 搭配 fields 的三種用法 - part27](https://youtu.be/ZUNRoWxVWAE) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---domain-%E6%90%AD%E9%85%8D-fields-%E7%9A%84%E4%B8%89%E7%A8%AE%E7%94%A8%E6%B3%95---part27)
+1. 第一種 - 直接在 model 中的 fileds 定義  employee_id = fields.Many2one('hr.employee', string="Employee", required=True,domain=[('active', '=', True)] )
+2. 第二種 - 直接在 view 中的 fileds 定義  <field name="employee_id" domain="[('user_id', '=', user_id)]"/>
+3. 第三種 - 透過 onchange 的方法增加 domain result = dict() , result['domain'] = {'employee_id': [('user_id', '=', self.user_id.id)]
 
 * [Youtube Tutorial - odoo 手把手教學 - form_view_ref 以及 tree_view_ref 說明 - part28](https://youtu.be/_YkrOp3ytlQ) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---form_view_ref-%E4%BB%A5%E5%8F%8A-tree_view_ref-%E8%AA%AA%E6%98%8E---part28)
 
