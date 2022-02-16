@@ -98,7 +98,8 @@ sudo reboot
     git commit -m "add new files" # a commit
     git push
     git remote add origin git@github.com:ksharry/odoo14-cookbook    #新增遠端數據庫
-    git push -u origin master     #參數 -u 等同於 --set-upstream，設定 upstream 可以使分支開始追蹤指定的遠端分支      
+    git push -u origin master     #參數 -u 等同於 --set-upstream，設定 upstream 可以使分支開始追蹤指定的遠端分支   
+    git checkout main
     
     git branch newbranch      #新增分支
     git checkout newbranch    #切換工作分支
