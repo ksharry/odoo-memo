@@ -90,7 +90,7 @@ sudo reboot
 6. linux設定  git config --global user.name “ksharry”  ;  git config --global user.email w461059@hotmail.com
 7. 連線到  ssh -T git@github.com   成功訊息:Hi github! You've successfully authenticated
 8. 上傳程式碼，先前要先去新增repositories。
-
+ >
     git init 
     git pull #獲取新版本
     git status #獲取需要上傳的檔案 
