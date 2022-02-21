@@ -67,6 +67,9 @@ sudo reboot
     echo "# googlesheets" >> README.md
     git init
     git add README.md
+    git add .
+    git remote -v
+    git pull origin main
     git commit -m "first commit"
     git branch -M main
     git remote add origin git@github.com:ksharry/googlesheets.git
