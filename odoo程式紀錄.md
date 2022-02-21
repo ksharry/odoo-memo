@@ -1,3 +1,20 @@
+#### 應收查看
+1. order_move_line
+   + qty_delivered > 0的表示有出貨
+   + qty_invoiced > 0 表示有轉應收
+   + 要查看應收與訂單關聯(invoice_lines)如下
+     > select * from sale_order_line_invoice_rel where invoice_line_id = 15696
+2. account_move_line
+   + 銷貨收入可以抓的exclude_from_invoice_tab = false and 科目是411開頭
+   + 應收帳款可以抓residual>0的
+   + 單收入與應收可以排除is_anglo_saxon_line是空白的
+   + 應收本幣抓balance，原幣抓price_total
+
+2. stock_move有存訂單明細的ID
+   + 關聯出貨與應收如下:(需安裝第三方:stock_picking_invoice_link)
+     > select * from stock_move_invoice_line_rel where move_id in ('19379', '17272');
+3. 
+
 #### 更改LOGO位置
 1. /home/wkc/odoo-dev/odoo/addons/web/static/src/img
 
