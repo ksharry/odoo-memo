@@ -312,6 +312,8 @@ sudo reboot
 16. odoo14調整連線pgadmin /etc/postgres/12/main 
   + 調整pg_hba.conf 0.0.0.0/0  # IPv4 local connections:   host    all             all             0.0.0.0/0               md5
   + 調整pg_hba.conf 0.0.0.0/0  # replication privilege.    host    replication     all             0.0.0.0/0               md5
+  + host    all             all             114.35.75.63/32            md5
+  + 
   + 開放postgresql.conf    listen_addresses = '*'
   + 重啟  sudo /etc/init.d/postgresql restart
   > 
