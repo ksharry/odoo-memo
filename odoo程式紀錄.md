@@ -1,3 +1,10 @@
+#### 沃X-出貨保留問題
+1. 更新stock_move_line的數量
+2. 更新stock_quant的數量
+
+#### 城X-價差問題
+1. 更新account_move_line的purchase_id
+
 #### 應收查看
 1. order_move_line
    + qty_delivered > 0的表示有出貨
