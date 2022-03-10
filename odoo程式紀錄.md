@@ -33,7 +33,7 @@
 
 
 #### 搬動addons指令
-1. cp -a /odoo/custom/git/addons/* /odoo/custom/addons/.
+1. sudo cp -a /odoo/custom/git/addons/* /odoo/custom/addons/.
 2. sudo chown -R odoo: /odoo/custom/addons
 3. sudo chmod 755 -R /odoo/custom/addons
 
