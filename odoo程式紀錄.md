@@ -1,3 +1,5 @@
+
+
 #### 沃X-出貨保留問題
 1. 更新stock_move_line的數量
 2. 更新stock_quant的數量
@@ -20,7 +22,13 @@
 2. stock_move有存訂單明細的ID
    + 關聯出貨與應收如下:(需安裝第三方:stock_picking_invoice_link)
      > select * from stock_move_invoice_line_rel where move_id in ('19379', '17272');
-3. 
+3. 跨資料庫更新
+   + 第一步
+     > CREATE EXTENSION dblink;
+   + 第二步
+     > INSERT INTO account_incoterms(id, name, code, active, create_uid,create_date, write_uid, write_date) SELECT id, name, code, active, create_uid,create_date, write_uid, write_date FROM dblink('dbname=abcd host=localhost port=5432 user=odoo password=odoo', 'select id, name, code, active, create_uid,create_date, write_uid, write_date from account_incoterms') AS fields(id integer, name character varying, code character varying, active boolean, create_uid integer,create_date timestamp without time zone, write_uid integer, write_date timestamp without time zone);
+
+select setval('account_incoterms_id_seq', (select max(id)+1 from account_incoterms), false);
 
 #### 更改LOGO位置
 1. /home/wkc/odoo-dev/odoo/addons/web/static/src/img
