@@ -2,7 +2,7 @@
 1. name,model都要用.；id用底線
 2. 注意IDS的名稱對應。
 3. tree editable="bottom"
-4. 
+4. d2 = datetime.datetime(2022, 4, 13, 8, 0, 0)
 
 ## Harry測試紀錄
 1. O2M 表頭對表身(一對多)，僅表身有關連值
