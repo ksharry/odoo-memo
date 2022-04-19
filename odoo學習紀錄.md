@@ -4,7 +4,8 @@
 3. tree editable="bottom"
 4. d2 = datetime.datetime(2022, 4, 13, 8, 0, 0)
 5. tree string="no_create_tree" create="0" delete="false" edit="1" editable="top">
-6. 
+6. Advanced Views(https://www.odoo.com/documentation/12.0/developer/howtos/backend.html#advanced-views)
+7. 
 
 ## Harry測試紀錄
 1. O2M 表頭對表身(一對多)，僅表身有關連值
