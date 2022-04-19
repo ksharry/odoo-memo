@@ -50,6 +50,7 @@
 * [Youtube Tutorial - odoo 手把手教學 - tree decoration - part17](https://youtu.be/tJdw6IEb8UQ) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---tree-decoration---part17)
 
 * [Youtube Tutorial - odoo 手把手教學 - model _rec_name 說明 - part18](https://youtu.be/JtcSnbHNjAU) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---model-_rec_name-%E8%AA%AA%E6%98%8E---part18)
+  + 有寫rec_name指定要取代name的欄位。
 
 * [Youtube Tutorial - odoo 手把手教學 - copy override 說明 - part19](https://youtu.be/VDnIFb7e7wM) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---copy-override-%E8%AA%AA%E6%98%8E---part19)
   + copy預設為True，可以自動複製其他資料
