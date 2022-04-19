@@ -8,6 +8,10 @@
 7. tree default_order="name"
 8. odoo14很像預設ondelete='restrict'
 9. python C:/odoo/odoo-14.0/odoo-bin shell -d dsc -c C:/odoo/odoo-14.0/odoo.conf
+10. self.env['e.service.b'].search([('service_id.name', '=', 'A0001')])
+11. SELECT "e_service_b".id FROM "e_service_b" LEFT JOIN "e_service" AS "e_service_b__service_id" ON ("e_service_b"."service_id"
+ = "e_service_b__service_id"."id") WHERE ("e_service_b__service_id"."name" = 'A0001') ORDER BY  "e_service_b"."id"
+e.service.b(1, 7, 8, 9)
 
 ## Harry測試紀錄
 1. O2M 表頭對表身(一對多)，僅表身有關連值
