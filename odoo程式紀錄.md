@@ -1,4 +1,6 @@
-
+#### bf安裝
+1. sudo apt-get install unoconv
+2. pip3 install py3o.template
 
 #### 沃X-出貨保留問題
 1. 更新stock_move_line的數量
