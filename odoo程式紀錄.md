@@ -1,4 +1,7 @@
-#### bf安裝
+## 紀錄:
+1. 清除模組:app_odoo_customize
+
+## bf安裝
 1. sudo su - odoo -s /bin/bash
 2. sudo apt-get install unoconv
 3. pip3 install py3o.template
