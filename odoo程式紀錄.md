@@ -6,6 +6,11 @@
 2. sudo apt-get install unoconv
 3. pip3 install py3o.template
 
+#### 無計價處理方式
+1. 複製一筆近期的計價
+2. 更新stock_valuation的account_id
+3. 更新account_move_line 的 move_id (如果填入的單號-料號正確，很像會自己填入)
+
 #### 沃X-出貨保留問題
 1. 更新stock_move_line的數量
 2. 更新stock_quant的數量
