@@ -7,9 +7,13 @@
 3. pip3 install py3o.template
 
 #### 無計價處理方式
-1. 複製一筆近期的計價
-2. 更新stock_valuation的account_id
-3. 更新account_move_line 的 move_id (如果填入的單號-料號正確，很像會自己填入)
+1. 應付
+   + 複製一筆近期的計價
+   + 更新stock_valuation的account_id
+   + 更新account_move_line 的 move_id (如果填入的單號-料號正確，很像會自己填入)
+2. 應收
+   + 因為應收確認要對應，因此要新增account_full_reconcile做對應
+   + 對應account_move_line
 
 #### 沃X-出貨保留問題
 1. 更新stock_move_line的數量
