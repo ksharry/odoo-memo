@@ -18,6 +18,7 @@
 #### 沃X-出貨保留問題
 1. 更新stock_move_line的數量
 2. 更新stock_quant的數量
+3. Can't reserve products for lot
 
 #### 城X-價差問題
 1. 更新account_move_line的purchase_id
