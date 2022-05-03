@@ -6,6 +6,41 @@
 2. sudo apt-get install unoconv
 3. pip3 install py3o.template
 
+#### 搬動addons指令
+1. cd /odoo/custom/git
+2. sudo cp -a /odoo/custom/git/addons/* /odoo/custom/addons/.
+3. sudo chown -R odoo: /odoo/custom/addons
+4. sudo chmod 755 -R /odoo/custom/addons
+
+#### github使用方式(win10)
+1. 參考https://progressbar.tw/posts/3
+2. https://git-scm.com/downloads
+3. 打開Git Bash
+4. ssh-keygen -t rsa -C 'Your email address'
+5. ssh-add ~/.ssh/id_rsa  or   ssh-agent bash
+6. 到github的設定，新增SSH的金鑰。
+7. 上傳程式碼，先前要先去新增repositories。
+  > 
+    echo "# googlesheets" >> README.md
+    git init
+    git add README.md
+    git add .
+    git remote -v
+    git pull origin main
+    git commit -m "first commit"
+    git branch -M main
+    git remote add origin git@github.com:ksharry/googlesheets.git
+    git push -u origin main
+7. 如果要隱藏，就增加.gitignore，如有檔案操作如下
+  > 
+    git rm --cached xxxx(檔名)
+    git clean -fX
+    重新push
+ 7. git更新odoo指令
+  > 
+    git pull
+    ./odoo-bin -d [資料庫名稱] -u base
+
 #### 無計價處理方式
 1. 應付
    + 複製一筆近期的計價
@@ -57,10 +92,6 @@ select setval('account_incoterms_id_seq', (select max(id)+1 from account_incoter
 4. exec(open('/odoo/odoo-server/test_shell.py').read())
 
 
-#### 搬動addons指令
-1. sudo cp -a /odoo/custom/git/addons/* /odoo/custom/addons/.
-2. sudo chown -R odoo: /odoo/custom/addons
-3. sudo chmod 755 -R /odoo/custom/addons
 
 #### wkf沒裝成功
 1. sudo wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.trusty_amd64.deb
@@ -104,34 +135,7 @@ select setval('account_incoterms_id_seq', (select max(id)+1 from account_incoter
 6. 啟動環境並新增資料庫
 
 sudo reboot
-#### github使用方式(win10)
-1. 參考https://progressbar.tw/posts/3
-2. https://git-scm.com/downloads
-3. 打開Git Bash
-4. ssh-keygen -t rsa -C 'Your email address'
-5. ssh-add ~/.ssh/id_rsa  or   ssh-agent bash
-6. 到github的設定，新增SSH的金鑰。
-7. 上傳程式碼，先前要先去新增repositories。
-  > 
-    echo "# googlesheets" >> README.md
-    git init
-    git add README.md
-    git add .
-    git remote -v
-    git pull origin main
-    git commit -m "first commit"
-    git branch -M main
-    git remote add origin git@github.com:ksharry/googlesheets.git
-    git push -u origin main
-7. 如果要隱藏，就增加.gitignore，如有檔案操作如下
-  > 
-    git rm --cached xxxx(檔名)
-    git clean -fX
-    重新push
- 7. git更新odoo指令
-  > 
-    git pull
-    ./odoo-bin -d [資料庫名稱] -u base
+
     
 #### github使用方式(ubuntu)
 1. sudo apt-get install git
