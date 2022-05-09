@@ -7,10 +7,9 @@
 3. pip3 install py3o.template
 
 #### 搬動addons指令
-1. cd /odoo/custom/git
-2. sudo cp -a /odoo/custom/git/addons/* /odoo/custom/addons/.
-3. sudo chown -R odoo: /odoo/custom/addons
-4. sudo chmod 755 -R /odoo/custom/addons
+1. sudo cp -a /odoo/custom/git/addons/* /odoo/custom/addons/.
+2. sudo chown -R odoo: /odoo/custom/addons
+3. sudo chmod 755 -R /odoo/custom/addons
 
 #### github使用方式(win10)
 1. 參考https://progressbar.tw/posts/3
@@ -22,6 +21,7 @@
 7. 上傳程式碼，先前要先去新增repositories。
   > 
     echo "# googlesheets" >> README.md
+    cd /odoo/custom/git
     git init
     git add README.md
     git add .
