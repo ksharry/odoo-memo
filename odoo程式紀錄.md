@@ -1,3 +1,7 @@
+##ODOO 不錯網址
+1. [nginx設定對應]PORT(https://www.odoo.com/zh_TW/forum/bang-zhu-1/odoo-14-multi-site-multi-company-same-server-shared-database-not-forwarding-traffic-to-the-correct-domain-182679#answer-182686)
+2. 
+
 #### 紀錄:
 1. 清除模組:app_odoo_customize
 
