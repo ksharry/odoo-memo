@@ -1,5 +1,5 @@
 ##ODOO 不錯網址
-1. [nginx設定對應]PORT(https://www.odoo.com/zh_TW/forum/bang-zhu-1/odoo-14-multi-site-multi-company-same-server-shared-database-not-forwarding-traffic-to-the-correct-domain-182679#answer-182686)
+1. [nginx設定對應PORT](https://www.odoo.com/zh_TW/forum/bang-zhu-1/odoo-14-multi-site-multi-company-same-server-shared-database-not-forwarding-traffic-to-the-correct-domain-182679#answer-182686)
 2. 
 
 #### 紀錄:
