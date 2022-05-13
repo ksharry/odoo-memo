@@ -111,27 +111,13 @@ e.service.b(1, 7, 8, 9)
   + 一個M2O跳出的編輯畫面，如果有兩個畫面，取後面的為主。
   + 語法:<field name="sheet_id" context="{'form_view_ref':'demo_expense_tutorial_v1.view_form_demo_expense_sheet_tutorial'}"/>
 
+* odoo 手把手教學 - Message Post 教學 - part29 - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---message-post-%E6%95%99%E5%AD%B8---part29)
+ 
 * [Youtube Tutorial - odoo 手把手教學 - groups 搭配 fields 用法 - part30](https://youtu.be/JyNyg7iHar0) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---groups-%E6%90%AD%E9%85%8D-fields-%E7%94%A8%E6%B3%95---part30)
   + 使用model定義群組比較嚴謹，使用view相對就是隱藏而已
   + module語法:groups='demo_expense_tutorial_v1.demo_expense_tutorial_group_manager'
   + view語法:<field name="tag_ids" widget="many2many_tags" groups="demo_expense_tutorial_v1.demo_expense_tutorial_group_manager"/>
  
-28. [odoo 14 觀念 - Search Panel 教學](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/14.0/demo_expense_tutorial_v1#odoo14-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---search-panel-%E6%95%99%E5%AD%B8---part11)
+* [Youtube Tutorial - odoo 手把手教學 - ACID transactions 說明 - part31](https://youtu.be/M36CNiK9xrM) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---acid-transactions-%E8%AA%AA%E6%98%8E---part31)
 
-29. [odoo domain 教學](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/odoo_domain_tutorial)
-
-30. [odoo domain operator 教學](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/domain_operator_tutorial)
-
-31. [odoo index 教學](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/odoo_index_tutorial)
-
-32. [odoo 觀念 - odoo12 和 odoo14 的 ORM Write 差異](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/14.0/odoo_write_tutorial)
-
-33. [odoo 14 教學 - 透過 controller 建立簡單 api](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/14.0/demo_controller_json)
-
-34. [odoo 教學 - 透過 AbstractModel 擴充 Model](demo_abstractmodel_v2_tutorial)
-
-35. [odoo 教學 - odoo session_redis 教學](session_redis_tutorial)
-
-36. [Odoo 15 中的 LISTEN/NOTIFY 運作原理](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/15.0/odoo-pg-listen-notify)
-
-37. [Odoo 15 建立簡易 REST API](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/15.0/demo_controller_api)
+* [Youtube Tutorial - odoo 手把手教學 - 特殊 groups 應用說明 - part32](https://youtu.be/PSiDfM840NI) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---%E7%89%B9%E6%AE%8A-groups-%E6%87%89%E7%94%A8%E8%AA%AA%E6%98%8E---part32)
