@@ -119,5 +119,7 @@ e.service.b(1, 7, 8, 9)
   + view語法:<field name="tag_ids" widget="many2many_tags" groups="demo_expense_tutorial_v1.demo_expense_tutorial_group_manager"/>
  
 * [Youtube Tutorial - odoo 手把手教學 - ACID transactions 說明 - part31](https://youtu.be/M36CNiK9xrM) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---acid-transactions-%E8%AA%AA%E6%98%8E---part31)
-
+  + [Transaction教學2](https://www.youtube.com/watch?v=P67IfMK4Y5g)
+  + 原子性就是一筆錯就全部ROLLBACK
+ 
 * [Youtube Tutorial - odoo 手把手教學 - 特殊 groups 應用說明 - part32](https://youtu.be/PSiDfM840NI) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---%E7%89%B9%E6%AE%8A-groups-%E6%87%89%E7%94%A8%E8%AA%AA%E6%98%8E---part32)
