@@ -1,4 +1,4 @@
-## Harry寫全新紀錄
+## Harry寫服務模組紀錄
 1. name,model都要用.；id用底線
 2. 注意IDS的名稱對應。
 3. tree editable="bottom"
@@ -13,6 +13,8 @@
  = "e_service_b__service_id"."id") WHERE ("e_service_b__service_id"."name" = 'A0001') ORDER BY  "e_service_b"."id"
 e.service.b(1, 7, 8, 9)
 12. 反灰 attrs="{'readonly': [('state', '=', 'available')]}"
+13. browse()主要根據記錄id 返回記錄 多個，采用列表形式。單個時可以直接傳入
+14. self.env['e.service'].with_user(2).browse(1).note
 
 ## Harry測試紀錄
 1. O2M 表頭對表身(一對多)，僅表身有關連值
