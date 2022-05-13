@@ -12,6 +12,7 @@
 11. SELECT "e_service_b".id FROM "e_service_b" LEFT JOIN "e_service" AS "e_service_b__service_id" ON ("e_service_b"."service_id"
  = "e_service_b__service_id"."id") WHERE ("e_service_b__service_id"."name" = 'A0001') ORDER BY  "e_service_b"."id"
 e.service.b(1, 7, 8, 9)
+12. 反灰 attrs="{'readonly': [('state', '=', 'available')]}"
 
 ## Harry測試紀錄
 1. O2M 表頭對表身(一對多)，僅表身有關連值
