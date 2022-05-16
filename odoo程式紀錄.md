@@ -4,6 +4,9 @@
 
 #### 紀錄:
 1. 清除模組:app_odoo_customize
+2. odoosleep:
+   + pip install interval
+   + pip install ecpay_invoice3
 
 #### bf安裝
 1. sudo su - odoo -s /bin/bash
