@@ -21,8 +21,9 @@
 3. 打開Git Bash
 4. ssh-keygen -t rsa -C 'Your email address'
 5. ssh-add ~/.ssh/id_rsa  or   ssh-agent bash
-6. 到github的設定，新增SSH的金鑰。
-7. 上傳程式碼，先前要先去新增repositories。
+6. C:\Users\Harry\.ssh
+7. 到github的設定，新增SSH的金鑰。
+8. 上傳程式碼，先前要先去新增repositories。
   > 
     echo "# googlesheets" >> README.md
     cd /odoo/custom/git
