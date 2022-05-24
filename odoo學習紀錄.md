@@ -126,3 +126,4 @@ e.service.b(1, 7, 8, 9)
   + Durability 持久性
  
 * [Youtube Tutorial - odoo 手把手教學 - 特殊 groups 應用說明 - part32](https://youtu.be/PSiDfM840NI) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---%E7%89%B9%E6%AE%8A-groups-%E6%87%89%E7%94%A8%E8%AA%AA%E6%98%8E---part32)
+  + base.group_no_one 開發者模式才可以看得到
