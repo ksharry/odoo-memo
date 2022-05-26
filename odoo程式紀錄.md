@@ -63,6 +63,7 @@
 2. 更新stock_quant的預留數量
 3. Can't reserve products for lot-訂單
 4. It is not possible to unreserve more products of %s than you have in stock-出貨
+5. 調撥數量異常(調整product_qty) select * from stock_move_line where reference='WH/MISC8/00027'
 
 #### 城X-價差問題
 1. 更新account_move_line的purchase_id
