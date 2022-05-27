@@ -43,7 +43,11 @@ e.service.b(1, 7, 8, 9)
    + 在data下寫xml(e_service_sequence_id)
    + py檔寫功能，在寫入時更新create
    + 後台序號可以查看
-7. 
+7. 加活動
+   + 在data下寫xml(mail.activity.type)
+   + PY程式寫繼承、功能，VIEW寫活動畫面
+   + 後台活動類型可以查看
+8.  
 
 ## Harry測試紀錄
 1. O2M 表頭對表身(一對多)，單頭
