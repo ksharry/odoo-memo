@@ -17,6 +17,7 @@ e.service.b(1, 7, 8, 9)
 13. browse()主要根據記錄id 返回記錄 多個，采用列表形式。單個時可以直接傳入
 14. self.env['e.service'].with_user(2).browse(1).note，沒測出來權限
 
+## Harry寫服務模組紀錄2
 #### https://github.com/twtrubiks/odoo-demo-addons-tutorial
 1. 寫class繼承問題紀錄
    + depend 要用底線(e_service)
