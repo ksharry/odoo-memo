@@ -1,4 +1,5 @@
 ## Harry寫服務模組紀錄
+#### 1-18都為紙本memo,19以後調整git紀錄
 1. name,model都要用.；id用底線
 2. 注意IDS的名稱對應。
 3. tree editable="bottom"
@@ -15,34 +16,35 @@ e.service.b(1, 7, 8, 9)
 12. 反灰 attrs="{'readonly': [('state', '=', 'available')]}"
 13. browse()主要根據記錄id 返回記錄 多個，采用列表形式。單個時可以直接傳入
 14. self.env['e.service'].with_user(2).browse(1).note，沒測出來權限
-15. 寫class繼承問題紀錄
-    + depend 要用底線(e_service)
-    + class名稱要改
-    + view的繼承ID是模組.畫面(要加上模組)
-16. 寫prototype繼承紀錄
-    + 使用在mail_thread,depend mail
-17. 寫delegation繼承紀錄
-    + user與partner;產品與產品變體
-    + 應用在建立明細時，自動產生主檔
-    + 所以子合約不適合，因為會自動產生主合約。
-    + 想不到應用，什麼情會需要建立小的大的也要自動建立。
-18. 加acton步驟
-    + 在data寫xml(ir.actions.server),並指定model與函式
-    + py寫函式內容
-    + 後台的action與service actiond可以查詢
-    + 空的 recordset 行為也像是 singleton
-19. 加排程動作
-    + 在view寫xml(ir.cron)，並指定model與函式
-    + py寫函釋內容
-    + 後台的安排的動作可以查看寫好的排程
-20. 
+
+#### https://github.com/twtrubiks/odoo-demo-addons-tutorial
+1. 寫class繼承問題紀錄
+   + depend 要用底線(e_service)
+   + class名稱要改
+   + view的繼承ID是模組.畫面(要加上模組)
+2. 寫prototype繼承紀錄
+   + 使用在mail_thread,depend mail
+3. 寫delegation繼承紀錄
+   + user與partner;產品與產品變體
+   + 應用在建立明細時，自動產生主檔
+   + 所以子合約不適合，因為會自動產生主合約。
+   + 想不到應用，什麼情會需要建立小的大的也要自動建立。
+4. 加acton步驟
+   + 在data寫xml(ir.actions.server),並指定model與函式
+   + py寫函式內容
+   + 後台的action與service actiond可以查詢
+   + 空的 recordset 行為也像是 singleton
+5. 加排程動作
+   + 在view寫xml(ir.cron)，並指定model與函式
+   + py寫函釋內容
+   + 後台的安排的動作可以查看寫好的排程
+6. 
 
 ## Harry測試紀錄
 1. O2M 表頭對表身(一對多)，單頭
 2. M2O 表頭對員工(多對一)，單身
 
 ## 沈弘哲
-#### https://github.com/twtrubiks/odoo-demo-addons-tutorial
 #### 1-18都為紙本memo,19以後調整git紀錄
 * [Youtube Tutorial - odoo 手把手教學 - Many2one - part1](https://youtu.be/vb_Z8KCI-wk) - [文章快速連結](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1#odoo-%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%B8---many2one---part1)
 
