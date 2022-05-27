@@ -15,6 +15,11 @@ e.service.b(1, 7, 8, 9)
 12. 反灰 attrs="{'readonly': [('state', '=', 'available')]}"
 13. browse()主要根據記錄id 返回記錄 多個，采用列表形式。單個時可以直接傳入
 14. self.env['e.service'].with_user(2).browse(1).note，沒測出來權限
+15. 寫繼承問題紀錄
+    + depend 要用底線(e_service)
+    + class名稱要改
+    + view的繼承ID是模組.畫面(要加上模組)
+16.  
 
 ## Harry測試紀錄
 1. O2M 表頭對表身(一對多)，單頭
