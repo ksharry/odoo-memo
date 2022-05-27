@@ -47,6 +47,7 @@ e.service.b(1, 7, 8, 9)
    + 在data下寫xml(mail.activity.type)
    + PY程式寫繼承、功能，VIEW寫活動畫面
    + 後台活動類型可以查看
+   + 多寫User_id，遇到未知的權限錯誤，查看是不是table寫錯與更新模組。
 8.  
 
 ## Harry測試紀錄
