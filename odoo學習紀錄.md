@@ -36,10 +36,14 @@ e.service.b(1, 7, 8, 9)
    + 後台的action與service actiond可以查詢
    + 空的 recordset 行為也像是 singleton
 5. 加排程動作
-   + 在view寫xml(ir.cron)，並指定model與函式
+   + 在data寫xml(ir.cron)，並指定model與函式
    + py寫函釋內容
    + 後台的安排的動作可以查看寫好的排程
-6. 
+6. 加編號
+   + 在data下寫xml(e_service_sequence_id)
+   + py檔寫功能，在寫入時更新create
+   + 後台序號可以查看
+7. 
 
 ## Harry測試紀錄
 1. O2M 表頭對表身(一對多)，單頭
