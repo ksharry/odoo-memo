@@ -1,5 +1,5 @@
 ## Harry寫服務模組紀錄
-#### 1-18都為紙本memo,19以後調整git紀錄
+#### [沈弘哲網址](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1)
 1. name,model都要用.；id用底線
 2. 注意IDS的名稱對應。
 3. tree editable="bottom"
@@ -18,7 +18,7 @@ e.service.b(1, 7, 8, 9)
 14. self.env['e.service'].with_user(2).browse(1).note，沒測出來權限
 
 ## Harry寫服務模組紀錄2
-#### https://github.com/twtrubiks/odoo-demo-addons-tutorial
+#### [沈弘哲網址](https://github.com/twtrubiks/odoo-demo-addons-tutorial)
 1. 寫class繼承問題紀錄
    + depend 要用底線(e_service)
    + class名稱要改
