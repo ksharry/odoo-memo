@@ -1,12 +1,17 @@
 ##ODOO OWASP TOP10網路安全(開放式Web應用程式安全專案（OWASP）是一個線上社群，在Web應用安全領域提供免費的文章，方法，文件，工具和技術)
-1. Injection Flaws
+1. Injection Flaw-[網址](https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/589498/)
    + select id from users where username = '' or 1=1–  and password = '123'
-2. Cross Site Scripting (XSS)-[竊取用戶的 cookie](https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/589498/)
+2. Cross Site Scripting (XSS)-竊取用戶的 cookie-[網址](https://www.gss.com.tw/images/stories/epaper_GSS_security/pdf/epaper_gss_security_0067.pdf)
    + 使用者點擊特製的連結稱為 Reflected Attack
    + 網頁中已植入惡意的語法稱為 Persistent Attack
-3. Cross Site Request Forgery (CSRF)[跨站請求偽造](https://tech-blog.cymetrics.io/posts/jo/zerobased-cross-site-request-forgery/)
+3. Cross Site Request Forgery (CSRF)跨站請求偽造-[網址](https://tech-blog.cymetrics.io/posts/jo/zerobased-cross-site-request-forgery/)
    + 預防:增加所有敏感動作的驗證方式，例如：金流、提交個資 等…多加一道驗證碼的機制
-4. Malicious File Execution
+4. Malicious File Execution - 透過漏洞安裝惡意程式Drive-by Download -[網址](https://ithelp.ithome.com.tw/articles/10000037)
+5. Insecure Direct Object Reference - 透過路徑取得密碼 - [網址](https://blog.xuite.net/tolarku/blog/302302400-%E5%8E%9F%E4%BE%86%E9%80%99%E9%BA%BC%E7%B0%A1%E5%96%AE%E5%B0%B1......+-+Insecure+Direct+Object+Reference)
+6. Insecure Cryptographic Storage - 加密AES,SHA256 - [網址](https://ithelp.ithome.com.tw/articles/10222412)
+7. Insecure Communications - https - 網址同上
+   + [odoo安全清單](https://www.odoo.com/documentation/14.0/administration/install/deploy.html#security)
+8. Failure to Restrict URL Access - 用戶都須透過數據訪問驗證才能存取，例如訂單驗證 -網址同上
 
 ##ODOO 網址紀錄
 1. [odoo設定對應不同網址對應PORT](https://www.odoo.com/zh_TW/forum/bang-zhu-1/odoo-14-multi-site-multi-company-same-server-shared-database-not-forwarding-traffic-to-the-correct-domain-182679#answer-182686)
