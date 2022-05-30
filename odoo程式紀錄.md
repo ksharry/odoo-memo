@@ -1,5 +1,4 @@
-## ODOO OWASP TOP10
-0. [網址](https://www.odoo.com/zh_TW/security#owasp)
+## ODOO OWASP TOP10-[網址](https://www.odoo.com/zh_TW/security#owasp)
 0. 定義網路安全(開放式Web應用程式安全專案（OWASP）是一個線上社群，在Web應用安全領域提供免費的文章，方法，文件，工具和技術)
 1. Injection Flaw-[網址](https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/589498/)
    + select id from users where username = '' or 1=1–  and password = '123'
