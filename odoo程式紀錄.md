@@ -1,4 +1,4 @@
-##ODOO OWASP TOP10網路安全(開放式Web應用程式安全專案（OWASP）是一個線上社群，在Web應用安全領域提供免費的文章，方法，文件，工具和技術)
+## ODOO OWASP TOP10網路安全(開放式Web應用程式安全專案（OWASP）是一個線上社群，在Web應用安全領域提供免費的文章，方法，文件，工具和技術)
 1. Injection Flaw-[網址](https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/589498/)
    + select id from users where username = '' or 1=1–  and password = '123'
 2. Cross Site Scripting (XSS)-竊取用戶的 cookie-[網址](https://www.gss.com.tw/images/stories/epaper_GSS_security/pdf/epaper_gss_security_0067.pdf)
@@ -13,7 +13,7 @@
    + [odoo安全清單](https://www.odoo.com/documentation/14.0/administration/install/deploy.html#security)
 8. Failure to Restrict URL Access - 用戶都須透過數據訪問驗證才能存取，例如訂單驗證 -網址同上
 
-##ODOO 網址紀錄
+## ODOO 網址紀錄
 1. [odoo設定對應不同網址對應PORT](https://www.odoo.com/zh_TW/forum/bang-zhu-1/odoo-14-multi-site-multi-company-same-server-shared-database-not-forwarding-traffic-to-the-correct-domain-182679#answer-182686)
 2. [nginx設定對應不同網址對應PORT](https://www.serverlab.ca/tutorials/linux/web-servers-linux/how-to-configure-multiple-domains-with-nginx-on-ubuntu/)
 
