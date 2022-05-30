@@ -1,3 +1,13 @@
+##ODOO OWASP TOP10網路安全(開放式Web應用程式安全專案（OWASP）是一個線上社群，在Web應用安全領域提供免費的文章，方法，文件，工具和技術)
+1. Injection Flaws
+   + select id from users where username = '' or 1=1–  and password = '123'
+2. Cross Site Scripting (XSS)-[竊取用戶的 cookie](https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/589498/)
+   + 使用者點擊特製的連結稱為 Reflected Attack
+   + 網頁中已植入惡意的語法稱為 Persistent Attack
+3. Cross Site Request Forgery (CSRF)[跨站請求偽造](https://tech-blog.cymetrics.io/posts/jo/zerobased-cross-site-request-forgery/)
+   + 預防:增加所有敏感動作的驗證方式，例如：金流、提交個資 等…多加一道驗證碼的機制
+4. Malicious File Execution
+
 ##ODOO 網址紀錄
 1. [odoo設定對應不同網址對應PORT](https://www.odoo.com/zh_TW/forum/bang-zhu-1/odoo-14-multi-site-multi-company-same-server-shared-database-not-forwarding-traffic-to-the-correct-domain-182679#answer-182686)
 2. [nginx設定對應不同網址對應PORT](https://www.serverlab.ca/tutorials/linux/web-servers-linux/how-to-configure-multiple-domains-with-nginx-on-ubuntu/)
