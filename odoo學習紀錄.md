@@ -49,11 +49,14 @@ e.service.b(1, 7, 8, 9)
    + 後台活動類型可以查看
    + 多寫User_id，遇到未知的權限錯誤，查看是不是table寫錯與更新模組。
 8. 新增Wizard
+   + TransientModel會寫入檔案並定期刪除
    + 寫wizard下py與xml
    + 第一種:寫按鈕觸發wizard.xml的action觸發view並傳值，使用context="{'default_partner_id': partner_id}"，接著py檔透過default_get接收後進行預設
    + 第二種:在wizard的按鈕透過view預設再進行傳值到py。field name="context">{'default_test_pass_data': 'hello 123'}
    + 第三種:寫py按鈕透過呼叫另一個功能傳值
-9. 
+9. 新增Report
+   + AbstractModel沒有Table
+10. 
 
 ## Harry測試紀錄
 1. O2M 表頭對表身(一對多)，單頭
