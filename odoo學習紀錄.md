@@ -56,6 +56,9 @@ e.service.b(1, 7, 8, 9)
    + 第三種:寫py按鈕透過呼叫另一個功能傳值
 9. 新增Report
    + AbstractModel沒有Table
+   + report_action() 會去 call _get_report_values()
+   + odoo External ID not found in the system 是因為manifest沒有加
+   + 要記得模組+action，不然會出現ValueError: not enough values to unpack (expected 2, got 1)
 10. 
 
 ## Harry測試紀錄
