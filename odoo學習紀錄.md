@@ -1,6 +1,9 @@
 ## Harry寫報表紀錄
 #### 銷售報表
-1.調整客戶靠左
+1. QWEB紀錄
+   + t-call是報表的樣式
+   + t-att是屬性
+2.調整客戶靠左
   + report_saleorder_document
   + external_layout_standard
   + address_layout 調整t-att-class="colclass"為class="col-6"，使用視圖尋找外部ID
