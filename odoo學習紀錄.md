@@ -1,3 +1,11 @@
+## Harry寫報表紀錄
+#### 銷售報表
+1.調整客戶靠左
+  + report_saleorder_document
+  + external_layout_standard
+  + address_layout 調整t-att-class="colclass"為class="col-6"，使用視圖尋找外部ID
+2. 
+
 ## Harry寫服務模組紀錄
 #### [沈弘哲網址](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1)
 1. name,model都要用.；id用底線
