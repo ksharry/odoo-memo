@@ -8,6 +8,7 @@
    + external_layout_standard
    + address_layout 調整t-att-class="colclass"為class="col-6"，使用視圖尋找外部ID
 3. 調整銷售報表表身
+   + 清空欄位資料
    + 新增表格框度 th width="15%"
 4. 調整銷售報表新增一個Action(寫XML即可)
    + 先寫action對應語言樣板report_saleorder
