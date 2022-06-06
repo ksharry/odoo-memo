@@ -1,7 +1,7 @@
 ## Harry寫報表紀錄
 #### 銷售報表
 1. QWEB紀錄
-   + t-call是報表的樣式
+   + t-call是呼叫樣板
    + t-att是屬性
 2. 調整客戶靠左
    + report_saleorder_document
