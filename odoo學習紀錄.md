@@ -3,11 +3,11 @@
 1. QWEB紀錄
    + t-call是報表的樣式
    + t-att是屬性
-2.調整客戶靠左
-  + report_saleorder_document
-  + external_layout_standard
-  + address_layout 調整t-att-class="colclass"為class="col-6"，使用視圖尋找外部ID
-2. 
+2. 調整客戶靠左
+   + report_saleorder_document
+   + external_layout_standard
+   + address_layout 調整t-att-class="colclass"為class="col-6"，使用視圖尋找外部ID
+3. 
 
 ## Harry寫服務模組紀錄
 #### [沈弘哲網址](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1)
