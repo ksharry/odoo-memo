@@ -70,6 +70,9 @@ e.service.b(1, 7, 8, 9)
    + report_action() 會去 call _get_report_values()
    + odoo External ID not found in the system 是因為manifest沒有加
    + 要記得模組+action，不然會出現ValueError: not enough values to unpack (expected 2, got 1)
+   + 架構
+     + 寫一個列印的Wizard取得條件值，寫一個XML點選下載XML，透過PY傳值。
+     + 寫一個樣板，並用record紀錄樣板的action按鈕
 10. 
 
 ## Harry測試紀錄
