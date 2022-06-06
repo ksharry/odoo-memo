@@ -7,7 +7,14 @@
    + report_saleorder_document
    + external_layout_standard
    + address_layout 調整t-att-class="colclass"為class="col-6"，使用視圖尋找外部ID
-3. 
+3. 調整銷售報表表身
+   + 新增表格框度 th width="15%"
+4. 調整銷售報表新增一個Action(寫XML即可)
+   + 先寫action對應語言樣板report_saleorder
+   + 寫語言樣板對應客製的不印稅樣板report_saleorder_document
+   + 後台要將Menu加上去下拉選單才會有
+   + 翻譯會是空的
+5.  
 
 ## Harry寫服務模組紀錄
 #### [沈弘哲網址](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1)
