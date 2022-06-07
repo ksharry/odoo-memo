@@ -16,7 +16,12 @@
    + 後台要將Menu加上去下拉選單才會有
    + 翻譯會是空的
    + 如何進化用同一樣板進行
-5.  
+#### 庫存報表
+1. 修改出貨單品名
+   + 新增一個繼承
+   + stock.report_delivery_document
+   + 調整product_id.name
+2.   
 
 ## Harry寫服務模組紀錄
 #### [沈弘哲網址](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/master/demo_expense_tutorial_v1)
