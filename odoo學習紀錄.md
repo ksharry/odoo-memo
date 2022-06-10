@@ -93,9 +93,7 @@ e.service.b(1, 7, 8, 9)
 10. 新增Config 
    + 新增py繼承，並寫get與set
    + 寫xml
-   + 嘗試寫預設
-   + 把設定Label寫好一點
-   + 參考傭金的
+   + 寫預設還是要透過LIB取值
 11. 
 
 ## Harry測試紀錄
