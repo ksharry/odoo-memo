@@ -91,9 +91,9 @@ e.service.b(1, 7, 8, 9)
      + 寫一個列印的Wizard取得條件值，寫一個XML點選下載XML，透過PY傳值。
      + 寫一個樣板，並用record紀錄樣板的action按鈕
 10. 新增Config 
-   + 新增py繼承，並寫get與set
-   + 寫xml
-   + 寫預設還是要透過LIB取值
+    + 新增py繼承，並寫get與set
+    + 寫xml
+    + 寫預設還是要透過LIB取值
 11. 
 
 ## Harry測試紀錄
