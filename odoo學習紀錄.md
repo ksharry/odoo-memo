@@ -1,3 +1,49 @@
+## Harry開發課程紀錄(齊揚)
+#### 課程紀錄
+1. 6/7-odoo開發環境介紹
+   + Pycharm 環境介紹說明
+   + odoo template 配置
+   + odoo config 介紹
+   + postgres db config 
+   + odoo MVC 架構介紹
+ 
+2. 6/10-odoo Model 介紹
+   + Model 定義介紹
+   + function,compute,default 應用
+   + module init & module manifest 介紹解說
+   + odoo 開發設計框架詳細解說 Generic Structure
+ 
+3. 6/14-odoo ORM API(上)
+   + datatype 詳細解說(Char,Int,Date,Datetime,Boolean,Binary 一般欄位)
+   + datatype 詳細解說(M2o,O2m,M2m 複合式欄位)
+   + datatype compute 類型欄位設計及應用
+
+4. 6/17-odoo ORM API(下)
+   + Odoo shell script 應用練習
+   + odoo domain,filter,sort 練習
+   + Record Set,Tuple,List,field 介紹
+   + 教學案例介紹(簡易文管模型)
+ 
+5. 6/21-odoo security介紹
+   + model insert/write/update/delete security 配置介紹
+   + model security groups 配置規劃
+   + model security rule配置規劃
+  
+6. 6/24 odoo inherit 介紹
+   + odoo model inherit 規劃應用
+   + odoo view inherit 規劃應用
+ 
+7. 6/28 odoo 自行案例設計規劃
+   + 規劃設計構思
+   + 使用介面構思
+   + 表格欄位設計
+   + 邏輯功能運用
+   + 測試及偵錯訓練
+ 
+8. 7/1-odoo report 介紹
+   + Qweb report 介紹
+   + py3o template(Build Fish Report) 設計應用
+
 ## Harry寫報表紀錄
 #### 銷售報表
 1. QWEB紀錄
