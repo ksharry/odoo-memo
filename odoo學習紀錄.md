@@ -67,6 +67,8 @@
    + 新增一個繼承
    + stock.report_delivery_document
    + 調整product_id.name
+   + 如果出貨為done，樣板:stock_report_delivery_aggregated_move_lines
+   + 上面的改function:_get_aggregated_product_quantities
 2. 寫簽收欄位
    + 使用web.external_layout_standard調整新增頁尾，並空一行
 #### 應收報表
