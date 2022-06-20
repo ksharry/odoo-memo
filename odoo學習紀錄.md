@@ -155,7 +155,7 @@ e.service.b(1, 7, 8, 9)
 18.  Raw SQL 有Tuple跟dic格式，跳過ORM。
 19.  pivot用SQL寫另一個VIEW去串
 20.  image_mixin與binary(不需要其他的尺寸)
-21.  [0,0為新增;
+21.  [0,0 創造  [4,0 連接 [6,0 連結多筆(IDS)]]]
 22.  
 
 ## Harry測試紀錄
