@@ -156,7 +156,28 @@ e.service.b(1, 7, 8, 9)
 19.  pivot用SQL寫另一個VIEW去串
 20.  image_mixin與binary(不需要其他的尺寸)
 21.  [0,0 創造  [4,0 連接 [6,0 連結多筆(IDS)]]]
-22.  
+22.  odoo13以上只要view上面有加<field name="active" invisible="1"/>，就有歸檔功能
+23.  odoo14以上有search panel只能多對一，可以調整參數
+24.  domain 
+     + 波蘭表示式,[domain文件](https://www.odoo.com/documentation/12.0/developer/howtos/backend.html#domains)
+     + 從後面往回看
+25.  index
+     + [文件](https://docs.postgresql.tw/the-sql-language/performance-tips/using-explain)
+     + 指令:explain select id,state from e_service
+     + Seq Scan
+26.  ORM write差異:flush()可看出僅寫入一次
+27.  寫controllers
+     + db_name = dsc
+     + http指令
+       + http://localhost:8069/get_e_service/type1
+       + console指令
+         + import requests
+         + r = requests.get('http://localhost:8069/get_e_service/type1')
+         + r.text
+         + r.json()
+     + json指令
+       + curl -X POST -H "Content-Type: application/json" -d "{}" http://localhost:8069/get_e_service/type2 
+28.  
 
 ## Harry測試紀錄
 1. O2M 表頭對表身(一對多)，單頭
