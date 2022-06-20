@@ -103,6 +103,7 @@
        + PATCH /api/users/<string:pk> 修改特定 res_users 資料.
      + 取得
        + ODOO要先取得session id,web/session/authenticate/
+       + http://localhost:8069/api/users/
 32.  
 
 ## Harry開發課程紀錄(齊揚)
