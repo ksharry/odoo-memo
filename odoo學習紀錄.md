@@ -146,7 +146,11 @@ e.service.b(1, 7, 8, 9)
     + 資料庫是原始時間，透過時區轉換進行呈現，odoo會自動轉。
 12.  barcode(無掃描槍，PASS)
 13.  hierarchy撰寫(聯繫人)
-14.  
+14.  fields_view_getPASS
+15.  多公司測試PASS
+16.  testing測試
+     + python C:/odoo/odoo-14.0/odoo-bin -i e_service -d dsc -c C:/odoo/odoo-14.0/odoo.conf --test-enable
+17.  
 
 ## Harry測試紀錄
 1. O2M 表頭對表身(一對多)，單頭
