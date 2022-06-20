@@ -150,7 +150,13 @@ e.service.b(1, 7, 8, 9)
 15.  多公司測試PASS
 16.  testing測試
      + python C:/odoo/odoo-14.0/odoo-bin -i e_service -d dsc -c C:/odoo/odoo-14.0/odoo.conf --test-enable
-17.  
+     + 要有限制跟欄位
+17.  orm快取-增加性能，使用裝飾器直接存取。
+18.  Raw SQL 有Tuple跟dic格式，跳過ORM。
+19.  pivot用SQL寫另一個VIEW去串
+20.  image_mixin與binary(不需要其他的尺寸)
+21.  [0,0為新增;
+22.  
 
 ## Harry測試紀錄
 1. O2M 表頭對表身(一對多)，單頭
