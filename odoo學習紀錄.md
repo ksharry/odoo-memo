@@ -1,3 +1,110 @@
+## Harry寫服務模組紀錄2
+#### [沈弘哲網址](https://github.com/twtrubiks/odoo-demo-addons-tutorial)
+1. 寫class繼承問題紀錄
+   + depend 要用底線(e_service)
+   + class名稱要改
+   + view的繼承ID是模組.畫面(要加上模組)
+2. 寫prototype繼承紀錄
+   + 使用在mail_thread,depend mail
+3. 寫delegation繼承紀錄
+   + user與partner;產品與產品變體
+   + 應用在建立明細時，自動產生主檔
+   + 所以子合約不適合，因為會自動產生主合約。
+   + 想不到應用，什麼情會需要建立小的大的也要自動建立。
+4. 加acton步驟
+   + 在data寫xml(ir.actions.server),並指定model與函式
+   + py寫函式內容
+   + 後台的action與service actiond可以查詢
+   + 空的 recordset 行為也像是 singleton
+5. 加排程動作
+   + 在data寫xml(ir.cron)，並指定model與函式
+   + py寫函釋內容
+   + 後台的安排的動作可以查看寫好的排程
+6. 加編號
+   + 在data下寫xml(e_service_sequence_id)
+   + py檔寫功能，在寫入時更新create
+   + 後台序號可以查看
+7. 加活動
+   + 在data下寫xml(mail.activity.type)
+   + PY程式寫繼承、功能，VIEW寫活動畫面
+   + 後台活動類型可以查看
+   + 多寫User_id，遇到未知的權限錯誤，查看是不是table寫錯與更新模組。
+8. 新增Wizard
+   + TransientModel會寫入檔案並定期刪除
+   + 寫wizard下py與xml
+   + 第一種:寫按鈕觸發wizard.xml的action觸發view並傳值，使用context="{'default_partner_id': partner_id}"，接著py檔透過default_get接收後進行預設
+   + 第二種:在wizard的按鈕透過view預設再進行傳值到py。field name="context">{'default_test_pass_data': 'hello 123'}
+   + 第三種:寫py按鈕透過呼叫另一個功能傳值
+9. 新增Report
+   + AbstractModel沒有Table
+   + report_action() 會去 call _get_report_values()
+   + odoo External ID not found in the system 是因為manifest沒有加
+   + 要記得模組+action，不然會出現ValueError: not enough values to unpack (expected 2, got 1)
+   + 架構
+     + 寫一個列印的Wizard取得條件值，寫一個XML點選下載XML，透過PY傳值。
+     + 寫一個樣板，並用record紀錄樣板的action按鈕
+10. 新增Config 
+    + 新增py繼承，並寫get與set
+    + 寫xml
+    + 寫預設還是要透過LIB取值
+11. 時區
+    + 資料庫是原始時間，透過時區轉換進行呈現，odoo會自動轉。
+12.  barcode(無掃描槍，PASS)
+13.  hierarchy撰寫(聯繫人)
+14.  fields_view_getPASS
+15.  多公司測試PASS
+16.  testing測試
+     + python C:/odoo/odoo-14.0/odoo-bin -i e_service -d dsc -c C:/odoo/odoo-14.0/odoo.conf --test-enable
+     + 要有限制跟欄位
+17.  orm快取-增加性能，使用裝飾器直接存取。
+18.  Raw SQL 有Tuple跟dic格式，跳過ORM。
+19.  pivot用SQL寫另一個VIEW去串
+20.  image_mixin與binary(不需要其他的尺寸)
+21.  [0,0 創造  [4,0 連接 [6,0 連結多筆(IDS)]]]
+22.  odoo13以上只要view上面有加<field name="active" invisible="1"/>，就有歸檔功能
+23.  odoo14以上有search panel只能多對一，可以調整參數
+24.  domain 
+     + 波蘭表示式,[domain文件](https://www.odoo.com/documentation/12.0/developer/howtos/backend.html#domains)
+     + 從後面往回看
+25.  index
+     + [文件](https://docs.postgresql.tw/the-sql-language/performance-tips/using-explain)
+     + 指令:explain select id,state from e_service
+     + Seq Scan
+26.  ORM write差異:flush()可看出僅寫入一次
+27.  寫controllers
+     + db_name = dsc
+     + http指令
+       + http://localhost:8069/get_e_service/type1
+       + console指令
+         + import requests
+         + r = requests.get('http://localhost:8069/get_e_service/type1')
+         + r.text
+         + r.json()
+     + json指令
+       + curl -X POST -H "Content-Type: application/json" -d "{}" http://localhost:8069/get_e_service/type2 
+28.  透過 AbstractModel 擴充 Model
+     + 同一種東西，不同應用。
+29.  session_redis
+     + 統一管理，速度較快
+30.  Odoo 15 中的 LISTEN/NOTIFY 運作原理
+     + /longpolling/poll 這個 URL 觸發 LISTEN
+       + odoo15/addons/bus/controllers/main.py
+       + odoo15/addons/bus/models/bus.py
+     + 觸發 NOTIFY
+       + odoo15/addons/mail/controllers/discuss.py
+       + odoo15/addons/mail/models/mail_thread.py
+       + odoo15/addons/mail/models/mail_channel.py
+       + odoo15/addons/bus/models/bus.py
+31.  odoo15 Restfulapi
+     + Restfulapi設定
+       + GET /api/users/ 取得全部 res_users.
+       + GET /api/users/<string:pk> 取得特定 res_users.
+       + POST /api/users/ 新增 res_users.
+       + PATCH /api/users/<string:pk> 修改特定 res_users 資料.
+     + 取得
+       + ODOO要先取得session id,web/session/authenticate/
+32.  
+
 ## Harry開發課程紀錄(齊揚)
 #### 課程紀錄
 1. 6/7-odoo開發環境介紹
@@ -157,95 +264,7 @@ e.service.b(1, 7, 8, 9)
 28. Youtube Tutorial - odoo 手把手教學 - 特殊 groups 應用說明 - part32
     + base.group_no_one 開發者模式才可以看得到
 
-## Harry寫服務模組紀錄2
-#### [沈弘哲網址](https://github.com/twtrubiks/odoo-demo-addons-tutorial)
-1. 寫class繼承問題紀錄
-   + depend 要用底線(e_service)
-   + class名稱要改
-   + view的繼承ID是模組.畫面(要加上模組)
-2. 寫prototype繼承紀錄
-   + 使用在mail_thread,depend mail
-3. 寫delegation繼承紀錄
-   + user與partner;產品與產品變體
-   + 應用在建立明細時，自動產生主檔
-   + 所以子合約不適合，因為會自動產生主合約。
-   + 想不到應用，什麼情會需要建立小的大的也要自動建立。
-4. 加acton步驟
-   + 在data寫xml(ir.actions.server),並指定model與函式
-   + py寫函式內容
-   + 後台的action與service actiond可以查詢
-   + 空的 recordset 行為也像是 singleton
-5. 加排程動作
-   + 在data寫xml(ir.cron)，並指定model與函式
-   + py寫函釋內容
-   + 後台的安排的動作可以查看寫好的排程
-6. 加編號
-   + 在data下寫xml(e_service_sequence_id)
-   + py檔寫功能，在寫入時更新create
-   + 後台序號可以查看
-7. 加活動
-   + 在data下寫xml(mail.activity.type)
-   + PY程式寫繼承、功能，VIEW寫活動畫面
-   + 後台活動類型可以查看
-   + 多寫User_id，遇到未知的權限錯誤，查看是不是table寫錯與更新模組。
-8. 新增Wizard
-   + TransientModel會寫入檔案並定期刪除
-   + 寫wizard下py與xml
-   + 第一種:寫按鈕觸發wizard.xml的action觸發view並傳值，使用context="{'default_partner_id': partner_id}"，接著py檔透過default_get接收後進行預設
-   + 第二種:在wizard的按鈕透過view預設再進行傳值到py。field name="context">{'default_test_pass_data': 'hello 123'}
-   + 第三種:寫py按鈕透過呼叫另一個功能傳值
-9. 新增Report
-   + AbstractModel沒有Table
-   + report_action() 會去 call _get_report_values()
-   + odoo External ID not found in the system 是因為manifest沒有加
-   + 要記得模組+action，不然會出現ValueError: not enough values to unpack (expected 2, got 1)
-   + 架構
-     + 寫一個列印的Wizard取得條件值，寫一個XML點選下載XML，透過PY傳值。
-     + 寫一個樣板，並用record紀錄樣板的action按鈕
-10. 新增Config 
-    + 新增py繼承，並寫get與set
-    + 寫xml
-    + 寫預設還是要透過LIB取值
-11. 時區
-    + 資料庫是原始時間，透過時區轉換進行呈現，odoo會自動轉。
-12.  barcode(無掃描槍，PASS)
-13.  hierarchy撰寫(聯繫人)
-14.  fields_view_getPASS
-15.  多公司測試PASS
-16.  testing測試
-     + python C:/odoo/odoo-14.0/odoo-bin -i e_service -d dsc -c C:/odoo/odoo-14.0/odoo.conf --test-enable
-     + 要有限制跟欄位
-17.  orm快取-增加性能，使用裝飾器直接存取。
-18.  Raw SQL 有Tuple跟dic格式，跳過ORM。
-19.  pivot用SQL寫另一個VIEW去串
-20.  image_mixin與binary(不需要其他的尺寸)
-21.  [0,0 創造  [4,0 連接 [6,0 連結多筆(IDS)]]]
-22.  odoo13以上只要view上面有加<field name="active" invisible="1"/>，就有歸檔功能
-23.  odoo14以上有search panel只能多對一，可以調整參數
-24.  domain 
-     + 波蘭表示式,[domain文件](https://www.odoo.com/documentation/12.0/developer/howtos/backend.html#domains)
-     + 從後面往回看
-25.  index
-     + [文件](https://docs.postgresql.tw/the-sql-language/performance-tips/using-explain)
-     + 指令:explain select id,state from e_service
-     + Seq Scan
-26.  ORM write差異:flush()可看出僅寫入一次
-27.  寫controllers
-     + db_name = dsc
-     + http指令
-       + http://localhost:8069/get_e_service/type1
-       + console指令
-         + import requests
-         + r = requests.get('http://localhost:8069/get_e_service/type1')
-         + r.text
-         + r.json()
-     + json指令
-       + curl -X POST -H "Content-Type: application/json" -d "{}" http://localhost:8069/get_e_service/type2 
-28.  透過 AbstractModel 擴充 Model
-     + 同一種東西，不同應用。
-29.  session_redis
-     + 統一管理，速度較快
-30.  
+
 
 ## Harry測試紀錄
 1. O2M 表頭對表身(一對多)，單頭
