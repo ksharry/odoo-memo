@@ -241,7 +241,11 @@ e.service.b(1, 7, 8, 9)
          + r.json()
      + json指令
        + curl -X POST -H "Content-Type: application/json" -d "{}" http://localhost:8069/get_e_service/type2 
-28.  
+28.  透過 AbstractModel 擴充 Model
+     + 同一種東西，不同應用。
+29.  session_redis
+     + 統一管理，速度較快
+30.  
 
 ## Harry測試紀錄
 1. O2M 表頭對表身(一對多)，單頭
