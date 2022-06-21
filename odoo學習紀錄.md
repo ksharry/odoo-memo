@@ -1,3 +1,7 @@
+## Harry寫服務模組3
+#### [沈弘哲網址](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/15.0)
+
+
 ## Harry寫服務模組紀錄2
 #### [沈弘哲網址](https://github.com/twtrubiks/odoo-demo-addons-tutorial)
 1. 寫class繼承問題紀錄
