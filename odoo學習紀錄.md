@@ -137,6 +137,20 @@
    + 教學案例介紹(簡易文管模型)
  
 5. 6/21-odoo security介紹
+   + 講義O2M,M2M:
+     + (0,_,{‘field’:value})    新建一條記錄並將其與之關聯
+     + (1,id,{‘field’:value})   更新已關聯記錄的值
+     + (2,id,_) 移除關聯並刪除id關聯的記錄
+     + (3,id,_) 移除關聯但不刪除id關聯的記錄,通常使用來刪除many2many欄位關聯值
+     + (4,id,_) 關聯已存在記錄,僅適用  many-to-many 欄位
+     + (5,_,_)  刪除所有關聯,但不刪除關聯記錄
+     + (6,_,[ids]) 替換已關聯記錄清單為此處清單
+   + O2M使用
+     + 0 :　新增子表
+     + 1,id :　更新子表
+     + 2,id :　刪除子表
+     + 3,id :　刪除子表
+     + 5 :　刪除所有子表
    + model insert/write/update/delete security 配置介紹
    + model security groups 配置規劃
    + model security rule配置規劃
