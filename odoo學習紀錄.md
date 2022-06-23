@@ -1,6 +1,14 @@
 ## Harry寫服務模組3
-#### [沈弘哲網址](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/15.0)
-
+#### [沈弘哲odoo15網址](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/15.0)
+1. 視訊
+2. 協同編輯
+3. HTML Editor
+4. Group By Many2many
+5. Project Sharing - backend view
+6. command palette
+7. Website Builder, Configuration Wizards, New Jinja mail templates
+8. Scheduled Actions Triggers
+9. Profiling and Product Images
 
 ## Harry寫服務模組紀錄2
 #### [沈弘哲網址](https://github.com/twtrubiks/odoo-demo-addons-tutorial)
