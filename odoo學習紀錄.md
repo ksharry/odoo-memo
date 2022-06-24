@@ -123,7 +123,11 @@
      + 寫view，樣板格式，website.snippets
      + 寫位置expr="//div[@id='snippet_structure']
      + 原生的snippet位置:website/view/snippet/s_text_block.xml
-34.  
+34.  寫動態snippet
+     + snippet寫xml樣板，
+     + 註冊組建與選項
+     + 寫js，/static/src/js/snippets.js，動態渲染
+     + snippet添加JS文件website.assets_frontend
 
 ## Harry開發課程紀錄(齊揚)
 #### 課程紀錄
