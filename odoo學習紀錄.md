@@ -116,7 +116,14 @@
      + 取得
        + ODOO要先取得session id,web/session/authenticate/
        + http://localhost:8069/api/users/
-32.  
+32.  寫controller
+     + 新增controllers，寫路徑與傳值
+     + 寫view用網頁，引入網頁外框<t t-call="website.layout">
+33.  寫snippet
+     + 寫view，樣板格式，website.snippets
+     + 寫位置expr="//div[@id='snippet_structure']
+     + 原生的snippet位置:website/view/snippet/s_text_block.xml
+34.  
 
 ## Harry開發課程紀錄(齊揚)
 #### 課程紀錄
