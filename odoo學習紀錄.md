@@ -12,7 +12,7 @@
 
 ## Harry測試ODOO15
 #### [沈弘哲odoo15網址](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/15.0)
-1. 視訊:://flags/#unsafely-treat-insecure-origin-as-secure
+1. 視訊 chrome://flags/#unsafely-treat-insecure-origin-as-secure
 2. 協同編輯
 3. HTML Editor
 4. Group By Many2many
