@@ -1,4 +1,4 @@
-## Harry寫服務模組4
+## Harry寫服務模組3
 #### [cookbook網址](https://alanhou.org/odoo-14-cms-website-development/)
 1.  寫snippet
     + 寫view，樣板格式，website.snippets
@@ -10,7 +10,7 @@
     + 寫js，/static/src/js/snippets.js，動態渲染
     + snippet添加JS文件website.assets_frontend
 
-## Harry寫服務模組3
+## Harry測試ODOO15
 #### [沈弘哲odoo15網址](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/15.0)
 1. 視訊
 2. 協同編輯
