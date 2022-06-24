@@ -1,3 +1,15 @@
+## Harry寫服務模組4
+#### [cookbook網址](https://alanhou.org/odoo-14-cms-website-development/)
+1.  寫snippet
+    + 寫view，樣板格式，website.snippets
+    + 寫位置expr="//div[@id='snippet_structure']
+    + 原生的snippet位置:website/view/snippet/s_text_block.xml
+2.  寫動態snippet
+    + snippet寫xml樣板，
+    + 註冊組建與選項
+    + 寫js，/static/src/js/snippets.js，動態渲染
+    + snippet添加JS文件website.assets_frontend
+
 ## Harry寫服務模組3
 #### [沈弘哲odoo15網址](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/15.0)
 1. 視訊
@@ -119,15 +131,7 @@
 32.  寫controller
      + 新增controllers，寫路徑與傳值
      + 寫view用網頁，引入網頁外框<t t-call="website.layout">
-33.  寫snippet
-     + 寫view，樣板格式，website.snippets
-     + 寫位置expr="//div[@id='snippet_structure']
-     + 原生的snippet位置:website/view/snippet/s_text_block.xml
-34.  寫動態snippet
-     + snippet寫xml樣板，
-     + 註冊組建與選項
-     + 寫js，/static/src/js/snippets.js，動態渲染
-     + snippet添加JS文件website.assets_frontend
+
 
 ## Harry開發課程紀錄(齊揚)
 #### 課程紀錄
