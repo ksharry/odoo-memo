@@ -20,7 +20,7 @@
 6. command palette
 7. Website Builder, Configuration Wizards, New Jinja mail templates
 8. Scheduled Actions Triggers
-9. Profiling and Product Images
+9. Profiling and Product Images，[profiling使用說明](https://github.com/jlfwong/speedscope/blob/main/README-zh_CN.md)
 
 ## Harry寫服務模組紀錄2
 #### [沈弘哲網址](https://github.com/twtrubiks/odoo-demo-addons-tutorial)
