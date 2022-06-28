@@ -3,7 +3,7 @@
     + Wizard:action_view_sale_advance_payment_inv
     + 程式:sale_make_invoice_advance的create_invoices呼叫下面
     + sale.py/_create_invoices新增表頭._prepare_invoice
-    + sale.py/_create_invoices新增表身_get_invoiceable_lines
+    + sale.py/_create_invoices新增表身_get_invoiceable_lines，call_prepare_invoice_line設定值
     + 更新Invoice的origin
     + 寫入account_move
     + 處理退貨:action_switch_invoice_into_refund_credit_note
