@@ -4,8 +4,6 @@
     + 程式:sale_make_invoice_advance的create_invoices呼叫下面
     + sale.py/_create_invoices新增表頭._prepare_invoice
     + sale.py/_create_invoices新增表身_get_invoiceable_lines
-    + _prepare_invoice會預設表頭資料
-    + _get_invoiceable_lines會預設表身資料
     + 更新Invoice的origin
     + 寫入account_move
     + 處理退貨:action_switch_invoice_into_refund_credit_note
