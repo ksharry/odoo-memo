@@ -8,7 +8,10 @@
     + 寫入account_move
     + 處理退貨:action_switch_invoice_into_refund_credit_note
     + 回到sale_make_invoice_advance，因為open_invoice=1，所以關閉銷售，開啟應收畫面action_view_invoice
-2.  
+2.  銷售出貨
+    + 取消預留更新product_uom_qty為0，刪除
+    + 檢查可用性會產生stock_move_line 
+3.  
 
 ## Harry寫服務模組3
 #### [cookbook網址](https://alanhou.org/odoo-14-cms-website-development/)
