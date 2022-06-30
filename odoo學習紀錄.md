@@ -2,8 +2,8 @@
 1.  創建應收:
     + Wizard:action_view_sale_advance_payment_inv
     + 程式:sale_make_invoice_advance的create_invoices呼叫下面
-    + sale.py/_create_invoices新增表頭._prepare_invoice
-    + sale.py/_create_invoices新增表身_get_invoiceable_lines，call_prepare_invoice_line設定值
+    + sale.py/_create_invoices整理表頭._prepare_invoice
+    + sale.py/_create_invoices整理表身_get_invoiceable_lines，call_prepare_invoice_line設定值
     + 更新Invoice的origin
     + sale.py寫入account_move
       + account_move.py的_move_autocomplete_invoice_lines_create產生稅金與應收，並檢查是否平衡
