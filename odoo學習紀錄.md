@@ -18,12 +18,21 @@
 2.  銷售出貨
     + 取消預留更新product_uom_qty為0，刪除
     + 檢查可用性會產生stock_move_line 
-3.  自動產生出貨:
-    +  module_procurement_jit設定picking_no_auto_reserve為Ture
-    +  訂單單身確認會呼叫_action_launch_stock_rule
-    +  stock_rule啟動procurement group run 看是要買/賣/製造
-    +  stock_move/_run_pull產生stock_move並啟用確認段
-    +  stock_move/_action_assign產生stock_move_line
+3.  自動產生出貨單:
+    + stock.move與stock.move.line與tock.picking寫入(config.py的module_procurement_jit設定picking_no_auto_reserve為Ture-odoo14無直接相關)
+      +  sale_management/sale_order.py的action_confirm呼叫_action_confirm(
+      +  sale/sale.py的_action_confirm呼叫_action_launch_stock_rule
+      +  sale_stock.py的_action_launch_stock_rule呼叫self.env['procurement.group'].run(procurements)
+      +  stock_rule.py的run決定走_run_pull
+      +  ***stock_rule.py的_run_pull寫入stock_move，接著走moves._action_confirm()
+      +  stock_move.py的moves._action_confirm()會去呼叫_assign_picking(
+      +  stock_move.py的_assign_picking呼叫Picking.create(
+      +  ***stock_picking.py的create寫入stock.picking
+         +  先取pick.type取得序號
+         +  _autoconfirm_picking 立即移轉的才啟用
+         +  新增追蹤者
+      +  回到stock_move.py的moves._action_confirm()會去呼叫_action_assign
+      +  ***stock_move.py的_action_assign寫入stock_move_line
 4.  
 
 ## Harry寫服務模組3
