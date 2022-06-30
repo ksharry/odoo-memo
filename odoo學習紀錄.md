@@ -1,5 +1,5 @@
 ## Harry研究原生-銷售
-1.  銷售確認段產生出貨單:
+1. 銷售確認段產生出貨單
    + stock.move與stock.move.line與stock.picking寫入
      + config.py的module_procurement_jit設定picking_no_auto_reserve為Ture-odoo14無直接相關
      + sale_management/sale_order.py的action_confirm呼叫_action_confirm(
@@ -15,26 +15,26 @@
        +  新增追蹤者
      +  回到stock_move.py的moves._action_confirm()會去呼叫_action_assign
      +  ***stock_move.py的_action_assign寫入stock_move_line
-2.  創建應收:
-    + Wizard:action_view_sale_advance_payment_inv
-    + 程式:sale_make_invoice_advance的create_invoices呼叫下面
-    + sale.py/_create_invoices整理表頭._prepare_invoice
-    + sale.py/_create_invoices整理表身_get_invoiceable_lines，call_prepare_invoice_line設定值
-    + 更新Invoice的origin
-    + sale.py寫入account_move
-      + account_move.py的_move_autocomplete_invoice_lines_create產生稅金與應收，並檢查是否平衡
-      + _move_autocomplete_invoice_lines_values
-        + 計算稅金invoice._recompute_tax_lines()，_compute_base_line_taxescreate寫入account_move_line
-        + 計算cash進位invoice._recompute_cash_rounding_lines()
-        + 計算付款拆行_recompute_payment_terms_lines，_compute_diff_payment_terms_lines寫入account_move_line
-        + 上面兩個都是create_method寫入
-        + 轉換成字典_convert_to_write
-    + 處理退貨:action_switch_invoice_into_refund_credit_note
-    + 回到sale_make_invoice_advance，因為open_invoice=1，所以關閉銷售，開啟應收畫面action_view_invoice
+2. 創建應收:
+   + Wizard:action_view_sale_advance_payment_inv
+   + 程式:sale_make_invoice_advance的create_invoices呼叫下面
+   + sale.py/_create_invoices整理表頭._prepare_invoice
+   + sale.py/_create_invoices整理表身_get_invoiceable_lines，call_prepare_invoice_line設定值
+   + 更新Invoice的origin
+   + sale.py寫入account_move
+     + account_move.py的_move_autocomplete_invoice_lines_create產生稅金與應收，並檢查是否平衡
+     + _move_autocomplete_invoice_lines_values
+       + 計算稅金invoice._recompute_tax_lines()，_compute_base_line_taxescreate寫入account_move_line
+       + 計算cash進位invoice._recompute_cash_rounding_lines()
+       + 計算付款拆行_recompute_payment_terms_lines，_compute_diff_payment_terms_lines寫入account_move_line
+       + 上面兩個都是create_method寫入
+       + 轉換成字典_convert_to_write
+   + 處理退貨:action_switch_invoice_into_refund_credit_note
+   + 回到sale_make_invoice_advance，因為open_invoice=1，所以關閉銷售，開啟應收畫面action_view_invoice
 
-3.  銷售出貨
-    + 取消預留更新product_uom_qty為0，刪除
-    + 檢查可用性會產生stock_move_line  
+3. 銷售出貨
+   + 取消預留更新product_uom_qty為0，刪除
+   + 檢查可用性會產生stock_move_line  
 
 ## Harry寫服務模組3
 #### [cookbook網址](https://alanhou.org/odoo-14-cms-website-development/)
