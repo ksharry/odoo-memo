@@ -33,8 +33,16 @@
    + 回到sale_make_invoice_advance，因為open_invoice=1，所以關閉銷售，開啟應收畫面action_view_invoice
 
 3. 銷售出貨
-   + 取消預留更新product_uom_qty為0，刪除
-   + 檢查可用性會產生stock_move_line  
+   + 取消預留(do_unreserve):
+     + stock_picking.py的do_unreserve呼叫_do_unreserve
+     + stock_move.py的_do_unreserve
+       + 更新stock_move_line的product_uom_qty為0
+       + 刪除stock_move_line的資料
+   + 檢查可用性(action_assign):
+       + stock_picking.py的action_assign呼叫_action_assign
+       + _action_assign產生stock_move_line  
+       + account_move的forecast_availability是計算欄位，建議名稱要更改預測可用數量
+   + 驗證流程
 
 ## Harry寫服務模組3
 #### [cookbook網址](https://alanhou.org/odoo-14-cms-website-development/)
