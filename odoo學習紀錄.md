@@ -11,7 +11,13 @@
 2.  銷售出貨
     + 取消預留更新product_uom_qty為0，刪除
     + 檢查可用性會產生stock_move_line 
-3.  
+3.  自動產生出貨:
+    +  module_procurement_jit設定picking_no_auto_reserve為Ture
+    +  訂單單身確認會呼叫_action_launch_stock_rule
+    +  stock_rule啟動procurement group run 看是要買/賣/製造
+    +  stock_move/_run_pull產生stock_move並啟用確認段
+    +  stock_move/_action_assign產生stock_move_line
+4.  
 
 ## Harry寫服務模組3
 #### [cookbook網址](https://alanhou.org/odoo-14-cms-website-development/)
