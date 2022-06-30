@@ -5,7 +5,14 @@
     + sale.py/_create_invoices新增表頭._prepare_invoice
     + sale.py/_create_invoices新增表身_get_invoiceable_lines，call_prepare_invoice_line設定值
     + 更新Invoice的origin
-    + 寫入account_move
+    + sale.py寫入account_move
+      + account_move.py的_move_autocomplete_invoice_lines_create產生稅金與應收，並檢查是否平衡
+      + _move_autocomplete_invoice_lines_values
+        + 計算稅金invoice._recompute_tax_lines()，_compute_base_line_taxescreate寫入account_move_line
+        + 計算cash進位invoice._recompute_cash_rounding_lines()
+        + 計算付款拆行_recompute_payment_terms_lines，_compute_diff_payment_terms_lines寫入account_move_line
+        + 上面兩個都是create_method寫入
+        + 轉換成字典_convert_to_write
     + 處理退貨:action_switch_invoice_into_refund_credit_note
     + 回到sale_make_invoice_advance，因為open_invoice=1，所以關閉銷售，開啟應收畫面action_view_invoice
 2.  銷售出貨
