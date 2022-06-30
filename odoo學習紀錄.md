@@ -1,5 +1,5 @@
 ## Harry研究原生-銷售
-1 銷售確認段產生出貨單:
+1.  銷售確認段產生出貨單:
    + stock.move與stock.move.line與stock.picking寫入
      + config.py的module_procurement_jit設定picking_no_auto_reserve為Ture-odoo14無直接相關
      + sale_management/sale_order.py的action_confirm呼叫_action_confirm(
