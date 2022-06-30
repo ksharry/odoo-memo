@@ -1,20 +1,20 @@
 ## Harry研究原生-銷售
-1.  銷售確認段產生出貨單:
-    +  stock.move與stock.move.line與stock.picking寫入
-      +  config.py的module_procurement_jit設定picking_no_auto_reserve為Ture-odoo14無直接相關
-      +  sale_management/sale_order.py的action_confirm呼叫_action_confirm(
-      +  sale/sale.py的_action_confirm呼叫_action_launch_stock_rule
-      +  sale_stock.py的_action_launch_stock_rule呼叫self.env['procurement.group'].run(procurements)
-      +  stock_rule.py的run決定走_run_pull
-      +  ***stock_rule.py的_run_pull寫入stock_move，接著走moves._action_confirm()
-      +  stock_move.py的moves._action_confirm()會去呼叫_assign_picking(
-      +  stock_move.py的_assign_picking呼叫Picking.create(
-      +  ***stock_picking.py的create寫入stock.picking
-         +  先取pick.type取得序號
-         +  _autoconfirm_picking 立即移轉的才啟用
-         +  新增追蹤者
-      +  回到stock_move.py的moves._action_confirm()會去呼叫_action_assign
-      +  ***stock_move.py的_action_assign寫入stock_move_line
+1. 銷售確認段產生出貨單:
+   +  stock.move與stock.move.line與stock.picking寫入
+     +  config.py的module_procurement_jit設定picking_no_auto_reserve為Ture-odoo14無直接相關
+     +  sale_management/sale_order.py的action_confirm呼叫_action_confirm(
+     +  sale/sale.py的_action_confirm呼叫_action_launch_stock_rule
+     +  sale_stock.py的_action_launch_stock_rule呼叫self.env['procurement.group'].run(procurements)
+     +  stock_rule.py的run決定走_run_pull
+     +  ***stock_rule.py的_run_pull寫入stock_move，接著走moves._action_confirm()
+     +  stock_move.py的moves._action_confirm()會去呼叫_assign_picking(
+     +  stock_move.py的_assign_picking呼叫Picking.create(
+     +  ***stock_picking.py的create寫入stock.picking
+        +  先取pick.type取得序號
+        +  _autoconfirm_picking 立即移轉的才啟用
+        +  新增追蹤者
+     +  回到stock_move.py的moves._action_confirm()會去呼叫_action_assign
+     +  ***stock_move.py的_action_assign寫入stock_move_line
 2.  創建應收:
     + Wizard:action_view_sale_advance_payment_inv
     + 程式:sale_make_invoice_advance的create_invoices呼叫下面
