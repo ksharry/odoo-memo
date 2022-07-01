@@ -46,6 +46,7 @@
      + stock/stock_picking.py的_action_done呼叫todo_moves._action_done(cancel_backorder=self.env.context.get('cancel_backorder'))
      + stock_account/stock.move.py的_action_done呼叫_create_out_svl
      + stock_account/stock.move.py的_create_out_svl呼叫self.env['stock.valuation.layer'].sudo().create(svl_vals_list)寫入SVL
+     + base/ir_field.py的create進行新增
 
 ## Harry寫服務模組3
 #### [cookbook網址](https://alanhou.org/odoo-14-cms-website-development/)
