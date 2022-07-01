@@ -68,6 +68,15 @@
        + stock_account/stock_move.py的_account_entry_move呼叫self.with_company(company_from)._create_account_move_line(acc_valuation, acc_dest, journal_id, qty, description, svl_id, cost)
        + stock_account/stock_move.py的_create_account_move_line呼叫AccountMove.sudo().create(寫入分路明細(_prepare_account_move_line)
 
+3. 應收
+   + 驗證
+     + 大綱
+       + _onchange_invoice_date(會改變重新計算匯率與稅金
+       + _check_balanced是用SQL去判斷
+       + stock_account/account_move.py的 _stock_account_anglo_saxon_reconcile_valuation呼叫product_account_moves.reconcile()
+       + account/account.move.py的reconcile呼叫self.env['account.partial.reconcile'].create(sorted_lines._prepare_reconciliation_partials())產生資料
+       + account/account.move.py的reconcile呼叫self.env['account.full.reconcile'].create({
+     + 更新account_move_line
 
 ## Harry寫服務模組3
 #### [cookbook網址](https://alanhou.org/odoo-14-cms-website-development/)
