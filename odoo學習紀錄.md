@@ -48,7 +48,7 @@
        + stock_account/stock.move.py的_action_done呼叫_create_out_svl
        + stock_account/stock.move.py的_create_out_svl呼叫self.env['stock.valuation.layer'].sudo().create(svl_vals_list)寫入SVL
        + base/ir_field.py的create進行新增
-     + SVL寫入
+     + 計價分錄寫入
        + stock/wizard/Stock_immediate_transfer.py的process呼叫pickings_to_validate.with_context(skip_immediate=True).button_validate()
        + stock/stock_picking.py的button_validate呼叫pickings_to_backorder.with_context(cancel_backorder=False)._action_done()
        + sale_stock/stock.py的_action_done呼叫super()._action_done()
