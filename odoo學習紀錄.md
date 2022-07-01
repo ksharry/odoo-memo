@@ -40,13 +40,14 @@
      + _action_assign產生stock_move_line  
      + account_move的forecast_availability是計算欄位，建議名稱要更改預測可用數量
    + 驗證流程
-     + stock/wizard/Stock_immediate_transfer.py的process呼叫pickings_to_validate.with_context(skip_immediate=True).button_validate()
-     + stock/stock_picking.py的button_validate呼叫pickings_to_backorder.with_context(cancel_backorder=False)._action_done()
-     + sale_stock/stock.py的_action_done呼叫super()._action_done()
-     + stock/stock_picking.py的_action_done呼叫todo_moves._action_done(cancel_backorder=self.env.context.get('cancel_backorder'))
-     + stock_account/stock.move.py的_action_done呼叫_create_out_svl
-     + stock_account/stock.move.py的_create_out_svl呼叫self.env['stock.valuation.layer'].sudo().create(svl_vals_list)寫入SVL
-     + base/ir_field.py的create進行新增
+     + SVL寫入
+       + stock/wizard/Stock_immediate_transfer.py的process呼叫pickings_to_validate.with_context(skip_immediate=True).button_validate()
+       + stock/stock_picking.py的button_validate呼叫pickings_to_backorder.with_context(cancel_backorder=False)._action_done()
+       + sale_stock/stock.py的_action_done呼叫super()._action_done()
+       + stock/stock_picking.py的_action_done呼叫todo_moves._action_done(cancel_backorder=self.env.context.get('cancel_backorder'))
+       + stock_account/stock.move.py的_action_done呼叫_create_out_svl
+       + stock_account/stock.move.py的_create_out_svl呼叫self.env['stock.valuation.layer'].sudo().create(svl_vals_list)寫入SVL
+       + base/ir_field.py的create進行新增
 
 ## Harry寫服務模組3
 #### [cookbook網址](https://alanhou.org/odoo-14-cms-website-development/)
