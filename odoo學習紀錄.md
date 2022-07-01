@@ -17,18 +17,14 @@
      +  ***stock_move.py的_action_assign寫入stock_move_line
 2. 創建應收:
    + Wizard:action_view_sale_advance_payment_inv
-   + sale_make_invoice_advance的create_invoices呼叫
-   + sale.py/_create_invoices整理表頭._prepare_invoice
-   + sale.py/_create_invoices整理表身_get_invoiceable_lines，call_prepare_invoice_line設定值
-   + 更新Invoice的origin
+   + sale_make_invoice_advance.py的create_invoices呼叫sale_orders._create_invoices(final=self.deduct_down_payments)
    + sale.py的_create_invoices呼叫self.env['account.move'].sudo().with_context(default_move_type='out_invoice').create(invoice_vals_list)
-     + account_move.py的_move_autocomplete_invoice_lines_create呼叫產生稅金與應收，並檢查是否平衡
-     + _move_autocomplete_invoice_lines_values
-       + 計算稅金invoice._recompute_tax_lines()，_compute_base_line_taxescreate寫入account_move_line
-       + 計算cash進位invoice._recompute_cash_rounding_lines()
-       + 計算付款拆行_recompute_payment_terms_lines，_compute_diff_payment_terms_lines寫入account_move_line
-       + 上面兩個都是create_method寫入
-       + 轉換成字典_convert_to_write
+     + account_move.py的create呼叫self._move_autocomplete_invoice_lines_create(vals_list)
+     + account_move.py的_move_autocomplete_invoice_lines_create呼叫new_vals_list.append(move._move_autocomplete_invoice_lines_values())產生稅金與應收，並檢查是否平衡
+     + account_move.py的_move_autocomplete_invoice_lines_values呼叫self._recompute_dynamic_lines(recompute_all_taxes=True)
+       + 計算稅金:account_move.py的_recompute_dynamic_lines呼叫_compute_base_line_taxescreate寫入account_move_line
+       + 計算cash:account_move.py的_recompute_dynamic_lines呼叫_recompute_cash_rounding_lines()
+       + 計算付款:account_move.py的_recompute_dynamic_lines呼叫_recompute_payment_terms_lines寫入account_move_line
    + 處理退貨:action_switch_invoice_into_refund_credit_note
    + 回到sale_make_invoice_advance，因為open_invoice=1，所以關閉銷售，開啟應收畫面action_view_invoice
 
