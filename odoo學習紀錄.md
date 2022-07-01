@@ -40,7 +40,7 @@
      + _action_assign產生stock_move_line  
      + account_move的forecast_availability是計算欄位，建議名稱要更改預測可用數量
    + 驗證流程
-     + Quant寫入
+     + Quant寫入stock_account/stock_move.py的251,273,280
        + stock/wizard/Stock_immediate_transfer.py的process呼叫pickings_to_validate.with_context(skip_immediate=True).button_validate()
        + sale_stock/stock.py的_action_done呼叫super()._action_done()
        + stock/stock_picking.py的button_validate呼叫pickings_to_backorder.with_context(cancel_backorder=False)._action_done()
