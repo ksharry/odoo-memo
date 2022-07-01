@@ -40,6 +40,17 @@
      + _action_assign產生stock_move_line  
      + account_move的forecast_availability是計算欄位，建議名稱要更改預測可用數量
    + 驗證流程
+     + Quant寫入
+       + stock/wizard/Stock_immediate_transfer.py的process呼叫pickings_to_validate.with_context(skip_immediate=True).button_validate()
+       + sale_stock/stock.py的_action_done呼叫super()._action_done()
+       + stock/stock_picking.py的button_validate呼叫pickings_to_backorder.with_context(cancel_backorder=False)._action_done()
+       + stock_account/stock_move.py的_action_done呼叫super(StockMove, self)._action_done(cancel_backorder=cancel_backorder)
+       + stock/stock_move.py的_action_done呼叫moves_todo.mapped('move_line_ids').sorted()._action_done()
+       + *stock/stock_move_line.py的_action_done呼叫Quant._update_reserved_quantity(
+       + stock/stock_quant.py的_update_reserved_quantity呼叫quant.reserved_quantity -= max_quantity_on_quant
+       + field.py寫入__set__寫入records.write({self.name: write_value})
+       + stock/stock_quant.py的write呼叫super(StockQuant, self).write(vals)
+       + moodels.py寫入更新
      + SVL寫入
        + stock/wizard/Stock_immediate_transfer.py的process呼叫pickings_to_validate.with_context(skip_immediate=True).button_validate()
        + stock/stock_picking.py的button_validate呼叫pickings_to_backorder.with_context(cancel_backorder=False)._action_done()
