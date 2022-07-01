@@ -48,6 +48,15 @@
        + stock_account/stock.move.py的_action_done呼叫_create_out_svl
        + stock_account/stock.move.py的_create_out_svl呼叫self.env['stock.valuation.layer'].sudo().create(svl_vals_list)寫入SVL
        + base/ir_field.py的create進行新增
+     + SVL寫入
+       + stock/wizard/Stock_immediate_transfer.py的process呼叫pickings_to_validate.with_context(skip_immediate=True).button_validate()
+       + stock/stock_picking.py的button_validate呼叫pickings_to_backorder.with_context(cancel_backorder=False)._action_done()
+       + sale_stock/stock.py的_action_done呼叫super()._action_done()
+       + stock/stock_picking.py的_action_done呼叫todo_moves._action_done(cancel_backorder=self.env.context.get('cancel_backorder'))
+       + stock_account/stock_move.py的_action_done呼叫svl.stock_move_id._account_entry_move(svl.quantity, svl.description, svl.id, svl.value)
+       + stock_account/stock_move.py的_account_entry_move呼叫self.with_company(company_from)._create_account_move_line(acc_valuation, acc_dest, journal_id, qty, description, svl_id, cost)
+       + stock_account/stock_move.py的_create_account_move_line呼叫AccountMove.sudo().create(寫入分路明細(_prepare_account_move_line)
+
 
 ## Harry寫服務模組3
 #### [cookbook網址](https://alanhou.org/odoo-14-cms-website-development/)
