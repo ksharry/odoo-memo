@@ -19,6 +19,7 @@
    + Wizard:action_view_sale_advance_payment_inv
    + sale_make_invoice_advance.py的create_invoices呼叫sale_orders._create_invoices(final=self.deduct_down_payments)
    + sale.py的_create_invoices呼叫self.env['account.move'].sudo().with_context(default_move_type='out_invoice').create(invoice_vals_list)
+     + account_account.py的create呼叫res_ids = super(AccountGroup, self).create(vals_list)
      + account_move.py的create呼叫self._move_autocomplete_invoice_lines_create(vals_list)
      + account_move.py的_move_autocomplete_invoice_lines_create呼叫new_vals_list.append(move._move_autocomplete_invoice_lines_values())產生稅金與應收，並檢查是否平衡
      + account_move.py的_move_autocomplete_invoice_lines_values呼叫self._recompute_dynamic_lines(recompute_all_taxes=True)
