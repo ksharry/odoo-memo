@@ -70,10 +70,11 @@
 
 3. 應收
    + 驗證
-     + 大綱
+     + 大綱(stock_account/account_move.py的_post48,55行)
        + _onchange_invoice_date(會改變重新計算匯率與稅金
        + _check_balanced是用SQL去判斷
-       + stock_account/account_move.py的 _stock_account_anglo_saxon_reconcile_valuation呼叫product_account_moves.reconcile()
+       + stock_account/account_move.py的_post呼叫self.env['account.move.line'].create(self._stock_account_prepare_anglo_saxon_out_lines_vals())
+       + stock_account/account_move.py的_post呼叫_stock_account_anglo_saxon_reconcile_valuation呼叫product_account_moves.reconcile()
        + account/account.move.py的reconcile呼叫self.env['account.partial.reconcile'].create(sorted_lines._prepare_reconciliation_partials())產生資料
        + account/account.move.py的reconcile呼叫self.env['account.full.reconcile'].create({
      + 更新account_move_line
