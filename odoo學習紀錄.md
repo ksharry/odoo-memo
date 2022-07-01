@@ -17,12 +17,12 @@
      +  ***stock_move.py的_action_assign寫入stock_move_line
 2. 創建應收:
    + Wizard:action_view_sale_advance_payment_inv
-   + 程式:sale_make_invoice_advance的create_invoices呼叫下面
+   + sale_make_invoice_advance的create_invoices呼叫
    + sale.py/_create_invoices整理表頭._prepare_invoice
    + sale.py/_create_invoices整理表身_get_invoiceable_lines，call_prepare_invoice_line設定值
    + 更新Invoice的origin
-   + sale.py寫入account_move
-     + account_move.py的_move_autocomplete_invoice_lines_create產生稅金與應收，並檢查是否平衡
+   + sale.py的_create_invoices呼叫self.env['account.move'].sudo().with_context(default_move_type='out_invoice').create(invoice_vals_list)
+     + account_move.py的_move_autocomplete_invoice_lines_create呼叫產生稅金與應收，並檢查是否平衡
      + _move_autocomplete_invoice_lines_values
        + 計算稅金invoice._recompute_tax_lines()，_compute_base_line_taxescreate寫入account_move_line
        + 計算cash進位invoice._recompute_cash_rounding_lines()
@@ -39,10 +39,16 @@
        + 更新stock_move_line的product_uom_qty為0
        + 刪除stock_move_line的資料
    + 檢查可用性(action_assign):
-       + stock_picking.py的action_assign呼叫_action_assign
-       + _action_assign產生stock_move_line  
-       + account_move的forecast_availability是計算欄位，建議名稱要更改預測可用數量
+     + stock_picking.py的action_assign呼叫_action_assign
+     + _action_assign產生stock_move_line  
+     + account_move的forecast_availability是計算欄位，建議名稱要更改預測可用數量
    + 驗證流程
+     + stock/wizard/Stock_immediate_transfer.py的process呼叫pickings_to_validate.with_context(skip_immediate=True).button_validate()
+     + stock/stock_picking.py的button_validate呼叫pickings_to_backorder.with_context(cancel_backorder=False)._action_done()
+     + sale_stock/stock.py的_action_done呼叫super()._action_done()
+     + stock/stock_picking.py的_action_done呼叫todo_moves._action_done(cancel_backorder=self.env.context.get('cancel_backorder'))
+     + stock_account/stock.move.py的_action_done呼叫_create_out_svl
+     + stock_account/stock.move.py的_create_out_svl呼叫self.env['stock.valuation.layer'].sudo().create(svl_vals_list)寫入SVL
 
 ## Harry寫服務模組3
 #### [cookbook網址](https://alanhou.org/odoo-14-cms-website-development/)
