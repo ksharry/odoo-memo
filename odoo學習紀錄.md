@@ -101,6 +101,19 @@
        + 進行s2s
        + 呼叫原生的會計過帳
        + 再次進行調節
+   + 增加(invoice_outstanding_credits_debits_widget)
+     + account/account_payment_field.js的_onOutstandingCreditAssign呼叫js_assign_outstanding_line
+     + account_edi/account_move.py的reconcile呼叫super().reconcile()
+       + account/account_move.py的reconcile呼叫_create_tax_cash_basis_moves(
+         + account/account_partial_reconcile.py呼叫moves._post(soft=False)
+           + sale/account_invoice.py
+           + stock_account/account.move.py
+           + account_edi/account.move.py
+           + account/account.move.py寫入過帳
+       + account/account_move.py的reconcile呼叫呼叫_create_exchange_difference_move(-計算匯差
+       + account/account_move.py的reconcile呼叫self.env['account.full.reconcile'].create(-寫入調節
+     + account_edi/account_move.py的_update_payments_edi_documents更新EDI
+     + 回到會計畫面顯示(_compute_payments_widget_to_reconcile_info)
 
 ## Harry寫服務模組3
 #### [cookbook網址](https://alanhou.org/odoo-14-cms-website-development/)
