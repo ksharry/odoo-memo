@@ -90,13 +90,26 @@
      + account_full_reconcile.py的moves_to_reverse._reverse_moves移除
      + stock_account/account_move.py的button_draft呼叫filtered(lambda line: line.is_anglo_saxon_line).unlink()移除account_move
    + 付款(action_register_payment)
-     + Call wizard AccountPaymentRegister.py的action_create_payments
-     + _create_payments呼叫_get_batches()設定:keyvalue(付款)與line(會計明細)
-     + _create_payment_vals_from_wizard()整理付款資訊
-     + self.env['account.payment'].create(payment_vals_list)寫入
-       + account_payment.py呼叫super().create(vals_list)
-       + account.move.py寫入account_move
-       + account.move.py寫入account_move_line
+     + wizard/account_payment_register.py的action_create_payments呼叫self._create_payments()
+       + _create_payments呼叫_get_batches()設定:keyvalue(付款)與line(會計明細)
+       + _create_payment_vals_from_wizard()整理付款資訊
+       + self.env['account.payment'].create(payment_vals_list)寫入
+         + account.payment.py的的create()
+           + 呼叫super().create(vals_list) 寫入payment
+             + account.move.py的create()呼叫_move_autocomplete_invoice_lines_create 產生單頭
+               + _move_autocomplete_invoice_lines_values() 產生單身
+                 + _recompute_dynamic_lines
+           + 呼叫pay._prepare_move_line_default_vals 寫入MOVE_LINE
+             + self.env['account.move.line']._get_default_line_name
+             + pay.move_id.write(to_write)
+               + account/account_move.py的write(
+                 + super(AccountMove, self.with_context(check_move_validity=False, skip_account_move_synchronization=True)).write(vals)
+         + payments.action_post()
+           + sale/account_invoice.py
+           + stock_account/account.move.py
+           + account_edi/account.move.py
+           + account/account.move.py寫入過帳
+         + 
      + payment/account.payment.py
        + 進行s2s
        + 呼叫原生的會計過帳
@@ -114,6 +127,23 @@
        + account/account_move.py的reconcile呼叫self.env['account.full.reconcile'].create(-寫入調節
      + account_edi/account_move.py的_update_payments_edi_documents更新EDI
      + 回到會計畫面顯示(_compute_payments_widget_to_reconcile_info)
+
+## Harry研究原生-會計
+1. 傳票發布(action_post)
+   + account/account_move.py的action_post過程:
+     + sale/account_invoice.py
+       + stock_account/account.move.py
+         + account_edi/account.move.py
+           + account/account.move.py寫入過帳
+             + 檢查
+             + 寫入分析帳戶明細
+             + 更新過帳
+             + _increase_rank客戶rank
+             + 檢查平衡
+           + 寫入account.edi.document
+         + _stock_account_anglo_saxon_reconcile_valuation(-產生分錄
+       + js_assign_outstanding_line
+
 
 ## Harry寫服務模組3
 #### [cookbook網址](https://alanhou.org/odoo-14-cms-website-development/)
