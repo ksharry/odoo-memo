@@ -144,6 +144,7 @@
          + _stock_account_anglo_saxon_reconcile_valuation(-產生分錄
        + js_assign_outstanding_line
 1. 收款確認(action_post)
+   + 新增儲存會自動新增分錄底稿
    + account/account_payment.py的self.move_id._post過程:
      + sale/account_invoice.py
      + stock_account/account.move.py
