@@ -69,7 +69,7 @@
        + stock_account/stock_move.py的_create_account_move_line呼叫AccountMove.sudo().create(寫入分路明細(_prepare_account_move_line)
 
 3. 應收
-   + 驗證
+   + 驗證(action_post)
      + 大綱(stock_account/account_move.py的_post48,55行)
        + _onchange_invoice_date(會改變重新計算匯率與稅金
        + _check_balanced是用SQL去判斷
@@ -83,8 +83,24 @@
            + STOCK_VALUATION
            + 看起來是用標準價格進行給值
        + stock_account/account_move.py的_post呼叫_stock_account_anglo_saxon_reconcile_valuation呼叫product_account_moves.reconcile()
-       + account/account.move.py的reconcile呼叫self.env['account.partial.reconcile'].create(sorted_lines._prepare_reconciliation_partials())產生資料
-       + account/account.move.py的reconcile呼叫self.env['account.full.reconcile'].create({
+       + account/account.move.py的reconcile呼叫self.env['account.partial.reconcile'].create(sorted_lines._prepare_reconciliation_partials())產生資料，寫A8內的資料
+       + account/account.move.py的reconcile呼叫self.env['account.full.reconcile'].create({-寫哪一個A8
+   + 重製草稿(button_draft)
+     + account_edi/account_move.py的.remove_move_reconcile()移除
+     + account_full_reconcile.py的moves_to_reverse._reverse_moves移除
+     + stock_account/account_move.py的button_draft呼叫filtered(lambda line: line.is_anglo_saxon_line).unlink()移除account_move
+   + 付款(action_register_payment)
+     + Call wizard AccountPaymentRegister.py的action_create_payments
+     + _create_payments呼叫_get_batches()設定:keyvalue(付款)與line(會計明細)
+     + _create_payment_vals_from_wizard()整理付款資訊
+     + self.env['account.payment'].create(payment_vals_list)寫入
+       + account_payment.py呼叫super().create(vals_list)
+       + account.move.py寫入account_move
+       + account.move.py寫入account_move_line
+     + payment/account.payment.py
+       + 進行s2s
+       + 呼叫原生的會計過帳
+       + 再次進行調節
 
 ## Harry寫服務模組3
 #### [cookbook網址](https://alanhou.org/odoo-14-cms-website-development/)
