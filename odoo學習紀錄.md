@@ -73,11 +73,18 @@
      + 大綱(stock_account/account_move.py的_post48,55行)
        + _onchange_invoice_date(會改變重新計算匯率與稅金
        + _check_balanced是用SQL去判斷
-       + stock_account/account_move.py的_post呼叫self.env['account.move.line'].create(self._stock_account_prepare_anglo_saxon_out_lines_vals())
+       + stock_account/account_move.py的_post呼叫self.env['account.move.line'].create(self._stock_account_prepare_anglo_saxon_out_lines_vals())-COGS
+         + stock_account/product.py的get_product_accounts呼叫get_product_accounts取得目錄的所有ID
+         + account/product.py
+           + INCOME:收入
+           + EXPENSE:成本
+           + STOCK_INCOME:應付暫估
+           + STOCK_OUTCOME:待出貨
+           + STOCK_VALUATION
+           + 看起來是用標準價格進行給值
        + stock_account/account_move.py的_post呼叫_stock_account_anglo_saxon_reconcile_valuation呼叫product_account_moves.reconcile()
        + account/account.move.py的reconcile呼叫self.env['account.partial.reconcile'].create(sorted_lines._prepare_reconciliation_partials())產生資料
        + account/account.move.py的reconcile呼叫self.env['account.full.reconcile'].create({
-     + 更新account_move_line
 
 ## Harry寫服務模組3
 #### [cookbook網址](https://alanhou.org/odoo-14-cms-website-development/)
