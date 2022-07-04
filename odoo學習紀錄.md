@@ -143,7 +143,12 @@
            + 寫入account.edi.document
          + _stock_account_anglo_saxon_reconcile_valuation(-產生分錄
        + js_assign_outstanding_line
-
+1. 收款確認(action_post)
+   + account/account_payment.py的self.move_id._post過程:
+     + sale/account_invoice.py
+     + stock_account/account.move.py
+     + account_edi/account.move.py
+     + account/account.move.py寫入過帳
 
 ## Harry寫服務模組3
 #### [cookbook網址](https://alanhou.org/odoo-14-cms-website-development/)
