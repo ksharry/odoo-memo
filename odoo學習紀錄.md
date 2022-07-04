@@ -95,7 +95,7 @@
        + _create_payment_vals_from_wizard()整理付款資訊
        + self.env['account.payment'].create(payment_vals_list)寫入
          + account.payment.py的的create()
-           + 呼叫super().create(vals_list) 寫入payment
+           + 呼叫super().create(vals_list) 
              + account.move.py的create()呼叫_move_autocomplete_invoice_lines_create 產生單頭
                + _move_autocomplete_invoice_lines_values() 產生單身
                  + _recompute_dynamic_lines
