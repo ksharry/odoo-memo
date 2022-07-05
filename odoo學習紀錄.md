@@ -158,6 +158,24 @@
      + stock_account/account.move.py
      + account_edi/account.move.py
      + account/account.move.py
+4. PDF報表
+   + 程式流程
+     + 列印(check_report)
+     + base/ir_actions_report.py的_get_rendering_context呼叫data.update(report_model._get_report_values(docids, data=data))
+     + pdf/report_financial.py的_get_report_values
+       + 呼叫self.get_account_lines(data.get('form'))
+       + 呼叫get_account_lines
+       + 呼叫self.with_context(data.get('used_context'))._compute_report_balance(child_reports) 計算
+       + for report in reports逐一抓類型再判斷怎麼抓值
+         + if report.type == 'accounts'
+         + elif report.type == 'account_type'
+           + 呼叫self._compute_account_balance(accounts)
+             + 組SQL抓餘額
+         + elif report.type == 'account_report'
+         + elif report.type == 'sum'
+     + 
+5.    
+
 
 ## Harry寫服務模組3
 #### [cookbook網址](https://alanhou.org/odoo-14-cms-website-development/)
