@@ -175,7 +175,23 @@
          + elif report.type == 'sum'
      + 
 5.    
-
+## Harry研究原生-製造
+1. 確認(action_confirm)
+   + mrp/mrp_production呼叫action_confirm
+     + stock/stock_move.py的_adjust_procure_method呼叫stock_rule判斷是MTO或MTS
+     + mrp_subcontracting/stock_move.py的_action_confirm呼叫super(StockMove, move_to_not_merge)._action_confirm(merge=False)
+       + mrp/stock_move的_action_confirm呼叫super(StockMove, moves)._action_confirm
+         + stock/stock_move.py的'confirmed')._action_assign()
+           + mrp/stock_move.py的_action_assign呼叫super(StockMove, self)._action_assign()
+             + stock/stock_move.py的_action_assign呼叫
+     + mrp_subcontracting/stock_move.py的_action_confirm呼叫super(StockMove, self - move_to_not_merge)._action_confirm(merge=merge, merge_into=merge_into)
+       + mrp/stock_move的_action_confirm呼叫super(StockMove, moves)._action_confirm
+         + stock/stock_move.py的_action_confirm呼叫self.env['procurement.group'].run(procurement_requests, raise_user_error=not self.env.context.get('from_orderpoint')) 進行寫pC單
+           + mrp/stock_rule.py的run呼叫super(ProcurementGroup, self).run(procurements_without_kit, raise_user_error=raise_user_error)
+             + stock/stock_rule.py的run呼叫getattr(self.env['stock.rule'], '_run_%s' % action)(procurements)
+               + mrp/stock_rule.py的_run_pull呼叫super()._run_pull(procurements)
+                 + stock/stock_rule.py的_run_pull呼叫self.env['stock.move'].with_user(SUPERUSER_ID).sudo().with_company(company_id).create(moves_values) 新增PC
+                 + 
 
 ## Harry寫服務模組3
 #### [cookbook網址](https://alanhou.org/odoo-14-cms-website-development/)
