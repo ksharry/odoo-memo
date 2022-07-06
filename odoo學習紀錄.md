@@ -176,14 +176,18 @@
      + 
 5.    
 ## Harry研究原生-製造
-1. 確認(action_confirm)
+1. 新增單據
+   + mrp/mrp.production.py的create新增mrp.production與stock_move單據。
+2. 確認(action_confirm)
    + mrp/mrp_production呼叫action_confirm
      + stock/stock_move.py的_adjust_procure_method呼叫stock_rule判斷是MTO或MTS
+     + 以下WH/Pre-Production到Virtual Locations/Production
      + mrp_subcontracting/stock_move.py的_action_confirm呼叫super(StockMove, move_to_not_merge)._action_confirm(merge=False)
        + mrp/stock_move的_action_confirm呼叫super(StockMove, moves)._action_confirm
          + stock/stock_move.py的'confirmed')._action_assign()
            + mrp/stock_move.py的_action_assign呼叫super(StockMove, self)._action_assign()
              + stock/stock_move.py的_action_assign呼叫
+     + 以下WH/庫存-->WH/pred-prouction
      + mrp_subcontracting/stock_move.py的_action_confirm呼叫super(StockMove, self - move_to_not_merge)._action_confirm(merge=merge, merge_into=merge_into)
        + mrp/stock_move的_action_confirm呼叫super(StockMove, moves)._action_confirm
          + stock/stock_move.py的_action_confirm呼叫self.env['procurement.group'].run(procurement_requests, raise_user_error=not self.env.context.get('from_orderpoint')) 進行寫pC單
@@ -192,6 +196,24 @@
                + mrp/stock_rule.py的_run_pull呼叫super()._run_pull(procurements)
                  + stock/stock_rule.py的_run_pull呼叫self.env['stock.move'].with_user(SUPERUSER_ID).sudo().with_company(company_id).create(moves_values) 新增PC
                  + 
+3. 取消預留:刪除stock_move_line
+4. 檢查可用:新增stock_move_line
+5. 標記完成(button_mark_done)
+   + mrp/immediate_production.py的process呼叫productions_to_validate.with_context(skip_immediate=True).button_mark_done()
+     + mrp_account的button_mark_done呼叫super(MrpProduction, self).button_mark_done()
+       + mrp/mrp_production.py的button_mark_done 呼叫productions_not_to_backorder._post_inventory(cancel_backorder=True)
+         + mrp/mrp_production.py的_post_inventory呼叫moves_to_do._action_done()
+           + stock_accuount/stock_move.py的_action_done呼叫super(StockMove, self)._action_done(cancel_backorder=cancel_backorder)
+             + stock/stock_move.py的_action_done呼叫moves_todo.mapped('move_line_ids').sorted()._action_done()
+               + stock_accuount/stock_move_line.py的_action_done呼叫Quant._update_reserved_quantity 新增在手數量
+           + stock_accuount/stock_move.py的_action_done呼叫getattr(todo_valued_moves, '_create_%s_svl' % valued_type)() 265
+             + sudo().create(svl_vals_list) 新增計價
+           + stock_account/stock_move.py的_action_done呼叫svl.stock_move_id._account_entry_move(svl.quantity, svl.description, svl.id, svl.value) 
+           + stock_account/stock_move.py的_account_entry_move呼叫self.with_company(company_from)._create_account_move_line
+             + stock_account/stock_move.py的_create_account_move_line呼叫新增傳票
+              + stock_account/stock_move.py的呼叫new_account_move._post()傳票過帳
+6. 
+
 
 ## Harry寫服務模組3
 #### [cookbook網址](https://alanhou.org/odoo-14-cms-website-development/)
