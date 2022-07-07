@@ -212,7 +212,14 @@
            + stock_account/stock_move.py的_account_entry_move呼叫self.with_company(company_from)._create_account_move_line
              + stock_account/stock_move.py的_create_account_move_line呼叫新增傳票
               + stock_account/stock_move.py的呼叫new_account_move._post()傳票過帳
-6. 
+6. 拆解單-拆解(action_unbuild)
+   + mrp_unbulid的action_unbuild呼叫consume_moves._action_confirm()
+     + mrp_subcontracting/stock_move.py的_action_confirm呼叫super(StockMove, move_to_not_merge)._action_confirm(merge=False)
+       + mrp/stock_move的_action_confirm呼叫super(StockMove, moves)._action_confirm
+         + stock/stock_move.py的'confirmed')._action_assign()
+           + mrp/stock_move.py的_action_assign呼叫super(StockMove, self)._action_assign()
+             + stock/stock_move.py的_action_assign呼叫
+7. 
 
 
 ## Harry寫服務模組3
