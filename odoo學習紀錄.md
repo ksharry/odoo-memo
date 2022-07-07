@@ -128,6 +128,12 @@
      + account_edi/account_move.py的_update_payments_edi_documents更新EDI
      + 回到會計畫面顯示(_compute_payments_widget_to_reconcile_info)
 
+## Harry研究原生-庫存
+1. 重訂貨規格-order once(action_replenish)
+   + stock/stock_orderpoint.py的action_replenish呼叫_procure_orderpoint_confirm
+     +  _procure_orderpoint_confirm呼叫self.env['procurement.group'].with_context(from_orderpoint=True).run
+       + mrp/stock_rule.py的run產生明細 
+
 ## Harry研究原生-會計
 1. 傳票發布(action_post)
    + account/account_move.py的action_post過程:
