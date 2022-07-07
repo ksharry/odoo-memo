@@ -134,6 +134,17 @@
      +  _procure_orderpoint_confirm呼叫self.env['procurement.group'].with_context(from_orderpoint=True).run
        + mrp/stock_rule.py的run產生明細 
 
+## Harry研究原生-產品
+1. 修改成本價格-
+   + stock_account/product.py的write呼叫super(ProductTemplate, self).write(vals)
+     + mrp/rpoduct.py的write呼叫super().write(values)
+       + stock/product.py的write呼叫super(ProductTemplate, self).write(vals)
+         + product/product_template.py的write呼叫super(ProductTemplate, self).write(vals)
+           + _set_standard_price寫入價格後觸發寫分錄
+           + odoo/field.py的__set__呼叫records.write({self.name: write_value})
+             + stock_account的write呼叫self.filtered(lambda p: p.cost_method != 'fifo')._change_standard_price(vals['standard_price'])
+               + stock_account/product.py的_change_standard_price呼叫account_moves = self.env['account.move'].sudo().create(am_vals_list) 寫入分錄
+
 ## Harry研究原生-會計
 1. 傳票發布(action_post)
    + account/account_move.py的action_post過程:
