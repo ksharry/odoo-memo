@@ -552,4 +552,9 @@ e.service.b(1, 7, 8, 9)
 ## Harry測試紀錄
 1. O2M 表頭對表身(一對多)，單頭
 2. M2O 表頭對員工(多對一)，單身
-
+3. 抓在手
+   ```
+   quant = self.env["stock.quant"].search([('product_id', '=', line.product_id),('lot_id', '=', line.lot_id),
+                                                ('location_id', '=', line.route_id.rule_ids.location_src_id)
+                                                ])
+   ```
