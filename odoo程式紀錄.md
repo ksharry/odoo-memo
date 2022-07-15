@@ -150,7 +150,17 @@ select setval('account_incoterms_id_seq', (select max(id)+1 from account_incoter
 7. 設定檔案/etc/nginx/nginx.conf
 8. 移除:cd /etc/letsencrypt/renewal/
 9. sudo certbot delete --cert-name support.reverie.com.tw
-10. 
+
+#### NGINX相關
+1. sudo add-apt-repository ppa:certbot/certbot -y && sudo apt-get update -y
+2. sudo apt-get install python3-certbot-nginx -y
+3. sudo certbot --nginx -d ottsleep.com -d www.ottsleep.com --noninteractive --agree-tos --email harry.chang@dahsheng.com --redirect
+4. sudo certbot --nginx -d gosufu.com -d www.gosufu.com --noninteractive --agree-tos --email harry.chang@dahsheng.com --redirect
+5. sudo service nginx reload
+6. sudo systemctl start nginx
+7. sudo systemctl stop nginx
+8. sudo certbot revoke --cert-path /etc/letsencrypt/archive/www.ottsleep.com/cert1.pem
+
 
 #### vm安裝問題
 1. vm tool 安裝 用虛擬光碟下載到目錄後,使用sudo perl vmware-indatll.pl進行安裝
