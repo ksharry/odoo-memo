@@ -159,7 +159,13 @@ select setval('account_incoterms_id_seq', (select max(id)+1 from account_incoter
 5. sudo service nginx reload
 6. sudo systemctl start nginx
 7. sudo systemctl stop nginx
-8. sudo certbot revoke --cert-path /etc/letsencrypt/archive/www.ottsleep.com/cert1.pem
+8. sudo certbot revoke --cert-path /etc/letsencrypt/archive/ottsleep.com/cert1.pem
+9. sudo certbot delete --cert-name ottsleep.com
+10. sudo apt-get --purge remove nginx 
+11. sudo apt-get --purge remove nginx 
+12. sudo apt-get autoremove 
+13. sudo apt-get --purge remove nginx 
+14. sudo apt-get --purge remove nginx-common 
 
 
 #### vm安裝問題
