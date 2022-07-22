@@ -156,16 +156,17 @@ select setval('account_incoterms_id_seq', (select max(id)+1 from account_incoter
 2. sudo apt-get install python3-certbot-nginx -y
 3. sudo certbot --nginx -d ottsleep.com -d www.ottsleep.com --noninteractive --agree-tos --email harry.chang@dahsheng.com --redirect
 4. sudo certbot --nginx -d gosufu.com -d www.gosufu.com --noninteractive --agree-tos --email harry.chang@dahsheng.com --redirect
-5. sudo service nginx reload
-6. sudo systemctl start nginx
-7. sudo systemctl stop nginx
-8. sudo certbot revoke --cert-path /etc/letsencrypt/archive/ottsleep.com/cert1.pem
-9. sudo certbot delete --cert-name ottsleep.com
-10. sudo apt-get --purge remove nginx 
+5. sudo certbot --nginx -d support.reverie.com.tw -d support-test.reverie.com.tw --noninteractive --agree-tos --email harry.chang@dahsheng.com --redirect
+6. sudo service nginx reload
+7. sudo systemctl start nginx
+8. sudo systemctl stop nginx
+9. sudo certbot revoke --cert-path /etc/letsencrypt/archive/ottsleep.com/cert1.pem
+10. sudo certbot delete --cert-name ottsleep.com
 11. sudo apt-get --purge remove nginx 
-12. sudo apt-get autoremove 
-13. sudo apt-get --purge remove nginx 
-14. sudo apt-get --purge remove nginx-common 
+12. sudo apt-get --purge remove nginx 
+13. sudo apt-get autoremove 
+14. sudo apt-get --purge remove nginx 
+15. sudo apt-get --purge remove nginx-common 
 
 
 #### vm安裝問題
