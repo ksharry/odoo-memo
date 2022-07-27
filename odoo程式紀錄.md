@@ -1,3 +1,6 @@
+## ODOO 相關
+1. odoo13以前是backbone.js
+
 ## ODOO Mick曾 VSCODE用DOCKer設定方式
 1. /usr/bin/python3 -m debugpy --listen 0.0.0.0:4000 /usr/bin/odoo -c /etc/odoo/odoo.conf
 2. debug 你要先加 python 套件 debugpy
