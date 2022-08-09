@@ -1,12 +1,16 @@
 # odooapps上架
-1. github新增repostory
-2. git clone 網址
-3. cd 目錄
-4. git checkout -b 13.0
-5. git config user.name ksharry
-6. git config user.email ksharry1025@gmail.com
-7. 整理模組確認是否可用
-8. 
+1. [教學網址](https://www.youtube.com/watch?v=rryr9ILToT0&t=1608s)
+2. github新增repostory
+3. git clone 網址
+4. cd 目錄
+5. git checkout -b 13.0
+6. git config user.name ksharry
+7. git config user.email ksharry1025@gmail.com
+8. 整理模組確認是否可用
+9. git add -A
+10. git commit -M "[ADD] XXX"
+11. git push --set-upstream origin 13.0
+12. 如果要金額就打上金額與幣別就可以
 
 # ODOO 相關
 1. odoo13以前是backbone.js
