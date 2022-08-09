@@ -1,4 +1,14 @@
-## ODOO 相關
+# odooapps上架
+1. github新增repostory
+2. git clone 網址
+3. cd 目錄
+4. git checkout -b 13.0
+5. git config user.name ksharry
+6. git config user.email ksharry1025@gmail.com
+7. 整理模組確認是否可用
+8. 
+
+# ODOO 相關
 1. odoo13以前是backbone.js
 
 ## ODOO Mick曾 VSCODE用DOCKer設定方式
