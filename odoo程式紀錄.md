@@ -10,7 +10,8 @@
 9. git add -A
 10. git commit -M "[ADD] XXX"
 11. git push --set-upstream origin 13.0
-12. 如果要金額就打上金額與幣別就可以
+12. 到ODOO帳號進行設定
+13. 如果要金額就打上金額與幣別就可以
 
 # ODOO 相關
 1. odoo13以前是backbone.js
