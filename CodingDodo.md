@@ -17,4 +17,8 @@
      + The ServicesMixin to make RPC calls, call actions, load views, etc.
 4. The actual content of the web.Widget class
    +  the web.Widget main purpose is to render itself with QWeb, do its life cycle management, and inserting itself into the DOM
-5. 
+5. Lifecycle
+   + The Life cycle goes init -> willStart ->[rendering]-> start -> destroy
+   + 組件使用，搭配hook比較容易抓到state的狀態
+   + 
+6. 
