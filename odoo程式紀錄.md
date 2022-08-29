@@ -1,3 +1,9 @@
+# pycharm的git設定
+1. 先git bash 用git clone
+2. 設定pycharm git
+3. 設定pycharm的編譯器與路徑
+4. 
+
 # odooapps上架
 1. [教學網址](https://www.youtube.com/watch?v=rryr9ILToT0&t=1608s)
 2. github新增repostory
