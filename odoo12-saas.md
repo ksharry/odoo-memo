@@ -2,11 +2,11 @@
 
 1.  GPC申請VM
 
-![Alt text](https://github.com/ksharry/odoo12-saas-on-GCP/blob/main/png/1.png)
-![Alt text](https://github.com/ksharry/odoo12-saas-on-GCP/blob/main/png/2.png)
-![Alt text](https://github.com/ksharry/odoo12-saas-on-GCP/blob/main/png/7.png)
-![Alt text](https://github.com/ksharry/odoo12-saas-on-GCP/blob/main/png/4.png)
-![Alt text](https://github.com/ksharry/odoo12-saas-on-GCP/blob/main/png/5.png)
+![Alt text](https://github.com/ksharry/odoo-memo/blob/main/png/odoo12/1.png)
+![Alt text](https://github.com/ksharry/odoo-memo/blob/main/png/odoo12/2.png)
+![Alt text](https://github.com/ksharry/odoo-memo/blob/main/png/odoo12/7.png)
+![Alt text](https://github.com/ksharry/odoo-memo/blob/main/png/odoo12/4.png)
+![Alt text](https://github.com/ksharry/odoo-memo/blob/main/png/odoo12/5.png)
 
 2.  GCP/XSHELL 使用SSH連線
     + XSHELL上使用工具/新使用者金鑰精靈(2048/RSA/空白)產生金鑰
@@ -25,7 +25,7 @@
     sudo service odoo-server start
     http://35.201.191.91:8069/web/database/selector
     
-![Alt text](https://github.com/ksharry/odoo12-saas-on-GCP/blob/main/png/6.png)
+![Alt text](https://github.com/ksharry/odoo-memo/blob/main/png/odoo12/6.png)
 
 3.  安裝相關依賴
   > 
