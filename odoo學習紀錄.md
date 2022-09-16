@@ -251,6 +251,13 @@
     + 寫js，/static/src/js/snippets.js，動態渲染
     + snippet添加JS文件website.assets_frontend
 
+## Harry查看沈弘哲其他
+1. PgBouncer
+   + [YT](https://www.youtube.com/watch?v=QWZM5d3pa4Q)
+   + [repo](https://github.com/twtrubiks/postgresql-note/tree/main/pgbouncer-tutorial)
+   + 討論可能有問題，listen 100，可用這個[模組](https://github.com/OCA/server-tools/tree/14.0/bus_alt_connection)
+2.  
+
 ## Harry測試ODOO15
 #### [沈弘哲odoo15網址](https://github.com/twtrubiks/odoo-demo-addons-tutorial/tree/15.0)
 1. 視訊 chrome://flags/#unsafely-treat-insecure-origin-as-secure
