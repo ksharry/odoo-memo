@@ -1,5 +1,6 @@
 # bf報表
 1. windows要改設定裡面為ods，排除pdf的錯誤。
+2. [bf影片](https://www.youtube.com/watch?v=JbCn0uspnvc&list=PL6I8Iehrw1KZdLfEa4zSnf2tmVOjy2puF&index=2)
 
 # pycharm的git設定
 1. 先git bash 用git clone
