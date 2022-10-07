@@ -189,13 +189,13 @@ select setval('account_incoterms_id_seq', (select max(id)+1 from account_incoter
 7. sudo service nginx reload
 8. sudo systemctl start nginx
 9. sudo systemctl stop nginx
-10. sudo certbot revoke --cert-path /etc/letsencrypt/archive/ottsleep.com/cert1.pem
+10. **sudo certbot revoke --cert-path /etc/letsencrypt/archive/ottsleep.com/cert1.pem
 11. sudo certbot delete --cert-name ottsleep.com
-12. sudo apt-get --purge remove nginx 
-13. sudo apt-get --purge remove nginx 
-14. sudo apt-get autoremove 
-15. sudo apt-get --purge remove nginx 
-16. sudo apt-get --purge remove nginx-common 
+12. **sudo apt-get --purge remove nginx 
+14. **sudo apt-get autoremove 
+15. **sudo apt-get --purge remove nginx 
+16. **sudo apt-get --purge remove nginx-common 
+17. 將odoo_install.sh檔案調整保留nginx後相關的再裝一次。
 
 
 #### vm安裝問題
