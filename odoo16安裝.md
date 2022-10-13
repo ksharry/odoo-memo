@@ -1,13 +1,12 @@
-## STEP1：Odoo環境架設
+## STEP0：ubuntu環境架設(20.04)，安裝SSH並設定連線。
+## STEP1：Odoo16環境架設
+1. sudo wget https://raw.githubusercontent.com/Yenthe666/InstallScript/14.0/odoo_install.sh
+2. sudo chmod +x odoo_install.sh
+3. 調整使用nginx與註冊憑證。
+4. sudo ./odoo_install.sh
+5. sudo reboot
 
-sudo wget https://raw.githubusercontent.com/Yenthe666/InstallScript/14.0/odoo_install.sh
+## STEP2：設定資料庫連線
 
-sudo chmod +x odoo_install.sh
+## STEP3: 測試環境
 
-sudo ./odoo_install.sh
-
-sudo apt-get install ttf-wqy-zenhei -y
-
-sudo apt-get install ttf-wqy-microhei -y
-
-sudo reboot
