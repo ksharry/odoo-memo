@@ -1,5 +1,5 @@
 ## STEP0：ubuntu環境架設(20.04)，安裝SSH並設定連線。
-## STEP1：Odoo16環境架設
+## STEP1：Odoo16環境架設(使用666大神方法調整)
 1. sudo wget https://raw.githubusercontent.com/Yenthe666/InstallScript/14.0/odoo_install.sh
 2. sudo chmod +x odoo_install.sh
 3. 調整使用nginx與註冊憑證。
