@@ -1,4 +1,5 @@
-STEP1.1：Odoo環境架設
+## STEP1：Odoo環境架設
+
 sudo wget https://raw.githubusercontent.com/Yenthe666/InstallScript/14.0/odoo_install.sh
 
 sudo chmod +x odoo_install.sh
