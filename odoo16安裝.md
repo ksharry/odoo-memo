@@ -4,9 +4,6 @@
 2. sudo chmod +x odoo_install.sh
 3. 調整使用nginx與註冊憑證。
 4. sudo ./odoo_install.sh
-5. sudo reboot
 
-## STEP2：設定資料庫連線
-
-## STEP3: 測試環境
+## STEP2: 測試環境
 
