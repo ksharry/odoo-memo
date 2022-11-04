@@ -186,12 +186,13 @@ select setval('account_incoterms_id_seq', (select max(id)+1 from account_incoter
 4. sudo certbot --nginx -d gosufu.com -d www.gosufu.com --noninteractive --agree-tos --email harry.chang@dahsheng.com --redirect
 5. sudo certbot --nginx -d support.reverie.com.tw -d support-test.reverie.com.tw --noninteractive --agree-tos --email harry.chang@dahsheng.com --redirect
 6. sudo certbot --nginx -d test.ottsleep.com --noninteractive --agree-tos --email harry.chang@dahsheng.com --redirect
-7. sudo service nginx reload
-8. sudo systemctl start nginx
-9. sudo systemctl stop nginx
-10. **sudo certbot revoke --cert-path /etc/letsencrypt/archive/ottsleep.com/cert1.pem
-11. sudo certbot delete --cert-name ottsleep.com
-12. **sudo apt-get --purge remove nginx 
+7. sudo certbot --nginx -d www.jidago.com -d www.senyuantang.com --noninteractive --agree-tos --email harry.chang@dahsheng.com --redirect
+8. sudo service nginx reload
+9. sudo systemctl start nginx
+10. sudo systemctl stop nginx
+11. **sudo certbot revoke --cert-path /etc/letsencrypt/archive/ottsleep.com/cert1.pem
+12. sudo certbot delete --cert-name ottsleep.com
+13. **sudo apt-get --purge remove nginx 
 14. **sudo apt-get autoremove 
 15. **sudo apt-get --purge remove nginx 
 16. **sudo apt-get --purge remove nginx-common 
