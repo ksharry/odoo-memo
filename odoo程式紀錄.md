@@ -1,3 +1,9 @@
+# Xienci網站相關
+1. CRM用銷售團隊與website設定解決寄信問題
+2. 憑證調整在報表搜尋訂單，調整名稱。
+3. 圖片適用png再轉像素15*15
+4. 
+
 # bf報表
 1. windows要改設定裡面為ods，排除pdf的錯誤。
 2. [bf影片](https://www.youtube.com/watch?v=JbCn0uspnvc&list=PL6I8Iehrw1KZdLfEa4zSnf2tmVOjy2puF&index=2)
