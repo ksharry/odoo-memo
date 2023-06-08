@@ -1,3 +1,9 @@
+# 加入官方費用
+1. 10u,2448/年 - [網址](https://www.odoo.com/zh_TW/pricing-configurator#force_country=TW&implementation=yearly&price_by=yearly&pl=173&num_users=10&hosting=online&odoosh_workers=1&odoosh_storage=3&odoosh_staging=1&implementationService=success_pack&pack=25&integrating_partner_id=0)
+2. 客戶使用SH費用,5人以下,70/月
+3. 官方夥伴費用,2450/年 = [網址](https://www.odoo.com/zh_TW/become-a-partner/pricing)
+4. 
+
 # Xienci網站相關
 1. CRM用銷售團隊與website設定解決寄信問題
 2. 憑證調整在報表搜尋訂單，調整名稱。
