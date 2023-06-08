@@ -3,7 +3,7 @@
 2. 客戶使用SH費用,5人以下,70/月
 3. 官方夥伴費用,2450/年  [網址](https://www.odoo.com/zh_TW/become-a-partner/pricing)
 4. 技術服務包 - 50hr - 3570 - [網址](https://www.odoo.com/zh_TW/pricing-packs)
-5. 合作夥伴套裝 - [網址](https://www.odoo.com/zh_TW/page/partner-success-packs)
+5. 合作夥伴套裝(同上) - [網址](https://www.odoo.com/zh_TW/page/partner-success-packs)
 
 # Xienci網站相關
 1. CRM用銷售團隊與website設定解決寄信問題
