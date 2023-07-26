@@ -1,3 +1,8 @@
+## vmware 增加空間
+1. 要先複製VM出來再改空間，合併快照
+2. 增加網址參考-[網址](https://snippetinfo.net/mobile/media/2509)
+3. 
+
 # 加入官方費用
 1. 10u，20歐/月，76800/年 - [網址](https://www.odoo.com/zh_TW/pricing-configurator#force_country=TW&implementation=yearly&price_by=yearly&pl=173&num_users=10&hosting=online&odoosh_workers=1&odoosh_storage=3&odoosh_staging=1&implementationService=success_pack&pack=25&integrating_partner_id=0)
 2. 客戶使用SH費用，5人以下，70歐/月，26880/年
