@@ -1,3 +1,13 @@
+## 調整別名
+1. vi ~/.bashrc
+2. alias odoo-stop='sudo service odoo-server stop'
+3. alias odoo-start='sudo service odoo-server start'
+4. alias odoo-log-watch='sudo tail -f /var/log/odoo/odoo-server.log'
+5. alias odoo-restart='odoo-stop && odoo-start'
+6. alias odoo-clear-log='sudo cat /dev/null > /var/log/odoo/odoo-server.log'
+7. alias odoo-shell='source /odoo/odoo-server/shell.sh'
+
+
 ## vmware 增加空間
 1. 要先複製VM出來再改空間，合併快照
 2. 增加網址參考-[網址](https://snippetinfo.net/mobile/media/2509)
