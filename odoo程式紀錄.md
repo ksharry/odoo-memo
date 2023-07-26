@@ -6,7 +6,7 @@
 5. alias odoo-restart='odoo-stop && odoo-start'
 6. alias odoo-clear-log='sudo cat /dev/null > /var/log/odoo/odoo-server.log'
 7. alias odoo-shell='source /odoo/odoo-server/shell.sh'
-8. source ~/.bash_profile
+8. source ~/.bashrc
 
 
 ## vmware 增加空間
