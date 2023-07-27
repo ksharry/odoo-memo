@@ -217,7 +217,7 @@ select setval('account_incoterms_id_seq', (select max(id)+1 from account_incoter
 4. sudo certbot --nginx -d gosufu.com -d www.gosufu.com --noninteractive --agree-tos --email harry.chang@dahsheng.com --redirect
 5. sudo certbot --nginx -d support.reverie.com.tw -d support-test.reverie.com.tw --noninteractive --agree-tos --email harry.chang@dahsheng.com --redirect
 6. sudo certbot --nginx -d test.ottsleep.com --noninteractive --agree-tos --email harry.chang@dahsheng.com --redirect
-7. sudo certbot --nginx -d www.jidago.com -d www.senyuantang.com --noninteractive --agree-tos --email harry.chang@dahsheng.com --redirect
+7. sudo certbot --nginx -d consultant.xienci.com -d runbot.xienci.com -d dsc.xienci.com  --noninteractive --agree-tos --email harry.chang@dahsheng.com --redirect
 8. sudo service nginx reload
 9. sudo systemctl start nginx
 10. sudo systemctl stop nginx
@@ -228,6 +228,7 @@ select setval('account_incoterms_id_seq', (select max(id)+1 from account_incoter
 15. **sudo apt-get --purge remove nginx 
 16. **sudo apt-get --purge remove nginx-common 
 17. 將odoo_install.sh檔案調整保留nginx後相關的再裝一次。
+18. 要將new1.sh的名字改成odoo，有空格無法做
 
 
 #### vm安裝問題
