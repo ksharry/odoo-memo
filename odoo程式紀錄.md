@@ -1,5 +1,7 @@
 1. 清除log echo "" > /odoo-server.log
 2. 更改sudo passwd user
+3. tar -zcvf log-2311.tar.gz odoo-server.log
+4. 設定lograte = True
 
 ## 調整別名
 1. vi ~/.bashrc
