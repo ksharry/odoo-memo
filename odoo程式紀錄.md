@@ -1,3 +1,6 @@
+1. 清除log echo "" > /odoo-server.log
+2. 更改sudo passwd user
+
 ## 調整別名
 1. vi ~/.bashrc
 2. alias odoo-stop='sudo service odoo-server stop'
