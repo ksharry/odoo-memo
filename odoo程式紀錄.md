@@ -131,6 +131,7 @@
     重新push
  7. git更新odoo指令
   > 
+    cd odoo-server
     git pull
     ./odoo-bin -d [資料庫名稱] -u base
 
